@@ -26,24 +26,25 @@ export default function Header() {
       <div className="max-w-5xl w-full flex justify-between items-center text-white">
         <Link href={"/"}>
           <Image
-            src={"/"}
+            src={"/logo.png"}
             alt={""}
-            width={44}
-            height={44}
+            width={80}
+            height={40}
+            className="object-contain"
           />
         </Link>
-
         <ul className="flex gap-4 items-center">
           {link.map((item, index) => (
             <li key={index}>
-              <button className="font-semibold px-4 py-2">{item.title}</button>
+              <button className="font-semibold px-8 py-2 cursor-pointer hover:bg-white/10 rounded-md transition-colors duration-300">
+                {item.title}
+              </button>
             </li>
           ))}
         </ul>
-
         <Link
           href={""}
-          className="bg-secondary px-4 py-2  font-semibold rounded-md">
+          className="bg-secondary px-4 py-2  font-semibold rounded-md hover:bg-transparent border border-secondary hover:text-secondary transition-colors duration-300">
           Inscrever-se
         </Link>{" "}
       </div>

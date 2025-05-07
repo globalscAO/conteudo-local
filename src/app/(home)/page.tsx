@@ -1,3 +1,13 @@
+import About from "./components/About";
+import Hero from "./components/Hero";
+import WhatExpect from "./components/WhatExpect";
+
 export default function Home() {
-  return <div>O IMPACTO DO SECTOR FINANCEIRO NO CONTEÚDO LOCAL</div>;
+  return (
+    <div>
+      <Hero />
+      <About />
+      <WhatExpect />
+    </div>
+  );
 }

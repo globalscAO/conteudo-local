@@ -1,0 +1,35 @@
+import Image from "next/image";
+
+export default function WhatExpect() {
+  return (
+    <section className="flex w-full bg-gradient-to-t from-white to-white/70  justify-center items-center px-24 py-12">
+      <div className="w-full max-w-5xl flex flex-row-reverse gap-20 items-center">
+        <Image
+          src={"/plenaria/3.jpg"}
+          alt={""}
+          width={500}
+          height={400}
+          className="rounded-lg object-cover"
+        />
+
+        <div className="flex flex-col gap-2">
+          <span className="bg-secondary/20 w-fit text-secondary px-6 py-2 rounded-lg font-bold">
+            O que esperar?
+          </span>
+          <p className="text-primary">
+            Com a publicação do Decreto Presidencial nº 271/20 de 20 de Outubro,
+            foram estabelecidas diretrizes para a implementação do conteúdo
+            local no setor de Petróleo em Angola, tornando este sector num
+            instrumento essencial para a integração do sector empresarial e,
+            consequentemente, acelerar a geração de mais emprego e fomento à
+            diversificação econômica. Este marco regulatório visa não apenas
+            aumentar a participação de empresas e profissionais locais no sector
+            de petróleo e gás, mas também estimular toda a cadeia de valor,
+            particularmente de serviços como a formação e outros serviços
+            essenciais de apoio a atividade petrolífera.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

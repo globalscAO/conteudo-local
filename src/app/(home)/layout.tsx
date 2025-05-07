@@ -1,3 +1,4 @@
+import Footer from "../ui/Footer";
 import Header from "../ui/Header";
 
 export default function Layout({
@@ -6,9 +7,10 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="bg-[url(/background.png)] bg-cover">
       <Header />
       {children}
+      <Footer />
     </div>
   );
 }
