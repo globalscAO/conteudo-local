@@ -5,7 +5,7 @@ export default function WhatExpect() {
     <section className="flex w-full bg-gradient-to-t from-white to-white/70  justify-center items-center px-24 py-12">
       <div className="w-full max-w-5xl flex flex-row-reverse gap-20 items-center">
         <Image
-          src={"/plenaria/3.jpg"}
+          src={"/plenaria/3.JPG"}
           alt={""}
           width={500}
           height={400}

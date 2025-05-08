@@ -5,7 +5,7 @@ export default function About() {
     <section className="flex w-full bg-gradient-to-b from-white to-white/70  justify-center items-center px-24 py-12">
       <div className="w-full max-w-5xl flex gap-20 items-center">
         <Image
-          src={"/plenaria/1.jpg"}
+          src={"/plenaria/1.JPG"}
           alt={""}
           width={500}
           height={400}
@@ -28,7 +28,8 @@ export default function About() {
             <span className="font-bold">
               Como a Tecnologia pode Promover a Integração da Cadeia de Valor do
               Mercado Financeiro e da Indústria de Petróleo e Gás?
-            </span> <br/>
+            </span>{" "}
+            <br />
             <span>
               O Fórum sobre o Impacto do Sector Financeiro no Conteúdo Local,
               será uma oportunidade para discutir, fomentar e dinamizar boas
