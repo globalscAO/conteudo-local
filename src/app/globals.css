@@ -3,4 +3,15 @@
 @theme {
   --color-primary: #002363;
   --color-secondary: #c9741f;
+  --color-gold-one: #ae8625;
+  --color-gold-two: #f7ef8a;
+  --color-gold-three: #d2ac47;
+}
+
+.main-title {
+  @apply bg-secondary/20 w-fit text-secondary px-6 py-2 rounded-lg font-bold;
+}
+
+.gold {
+  @apply bg-gradient-to-r from-gold-one via-gold-two to-gold-three;
 }

@@ -1,0 +1,81 @@
+import Image from "next/image";
+
+export default function Guests() {
+  const guests = [
+    {
+      name: "Mário Nascimento",
+      imgUrl: "/guests/mario_nascimento.jpeg",
+      title: "Presidente da ABANC",
+    },
+    {
+      name: "Dra. Suzana Monteiro Camacho",
+      imgUrl: "/guests/suzana_camacho.jpeg",
+      title: "Advisor, Central Bank Board - BNA",
+    },
+    {
+      name: "Luís Teles",
+      imgUrl: "/guests/luis_teles.jpeg",
+      title: "CEO do Standard Bank",
+    },
+    {
+      name: "Osvaldo Macaia",
+      imgUrl: "/guests/osvaldo_lemos.jpeg",
+      title: "CEO do Banco Sol",
+    },
+    {
+      name: "Hugo Teles",
+      imgUrl: "/guests/hugo_teles.jpeg",
+      title: "PCE do Banco BIC Angola",
+    },
+    {
+      name: "Edson R. dos Santos",
+      imgUrl: "/guests/edson_santos.jpeg",
+      title: "PCA da ETU Energias",
+    },
+    {
+      name: "Alberto Jorge Mendes",
+      imgUrl: "/guests/alberto_mendes.jpeg",
+      title: "PCA do Grupo Simples",
+    },
+    {
+      name: "Luís Gonçalves",
+      imgUrl: "/guests/luis_goncalves.jpeg",
+      title: "CEO do BFA - Banco de Fomento Angola",
+    },
+  ];
+
+  return (
+    <div className="bg-[#EFEFEF]/90 flex justify-center items-center px-12 py-12">
+      <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
+        <h1 className="main-title">Destaque das ilustres figuras</h1>
+
+        <p className="text-sm text-primary font-semibold max-w-4xl">
+          Nesta seção, prestamos homenagem às personalidades de prestígio que,
+          com sua trajetória exemplar e liderança inspiradora, contribuem
+          significativamente para o fortalecimento do setor e da sociedade.
+        </p>
+
+        <ul className="flex flex-wrap gap-8 justify-center">
+          {guests.map((item, index) => (
+            <li key={index}>
+              <div className="w-50 flex flex-col items-center justify-center gap-4">
+                <Image
+                  src={item.imgUrl}
+                  alt={item.name}
+                  width={200}
+                  height={200}
+                  className="w-50 h-50 rounded-full object-cover object-top border-5 border-secondary"
+                />
+
+                <div className="text-primary">
+                  <p className="text-lg font-bold">{item.name}</p>
+                  <p>{item.title}</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
