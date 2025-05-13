@@ -1,0 +1,55 @@
+import { CircleChevronRight } from "lucide-react";
+
+export default function ContactUs() {
+  return (
+    <div className="px-12 py-24 flex items-center justify-center bg-gradient-to-t from-white to-white/70">
+      <div className="flex items-center justify-center gap-24">
+        <div className="flex flex-col items-center justify-center text-center gap-4 w-1/2 text-primary">
+          <div>
+            <h1 className="font-semibold">QUESTÕES, PROPOSTAS OU SUGESTÕES?</h1>
+            <p>
+              Preencha o formulário ao lado e entre em contacto conosco para
+              tirar dúvidas, solicitar informações ou iniciar uma conversa.
+            </p>
+          </div>
+
+          <CircleChevronRight />
+        </div>
+
+
+        <form className="bg-primary/25 text-primary p-8 flex flex-col items-center w-2/5 rounded-lg gap-6">
+          <h1 className="font-semibold">
+            PREENCHA O FORMULÁRIO E ENTRE EM CONTACTO.
+          </h1>
+
+          <input
+            type="text"
+            placeholder="Nome completo"
+            className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
+          />
+          <input
+            type="tel"
+            placeholder="Contacto telefónico"
+            className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
+          />
+          <textarea
+            placeholder="Contacto telefónico"
+            className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
+            rows={3}
+          />
+
+          <button
+            type="submit"
+            className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-primary cursor-pointer">
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}

@@ -8,7 +8,7 @@ export default function SpecialGuests() {
       title: "Presidente da Câmara Africana de Energia",
     },
     {
-      name: "Pedro Siza",
+      name: "Pedro Siza Vieira",
       image: "/guests/pedro_vieira.jpg",
       title: "Ex. Ministro da Economia de Portugal",
     },

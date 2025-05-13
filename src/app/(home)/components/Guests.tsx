@@ -42,6 +42,11 @@ export default function Guests() {
       imgUrl: "/guests/luis_goncalves.jpeg",
       title: "CEO do BFA - Banco de Fomento Angola",
     },
+     {
+      name: "Filipa Vilhena",
+      imgUrl: "/guests/filipa_vilhena.jpeg",
+      title: "Vice-Presidente da AECIPA",
+    },
   ];
 
   return (
