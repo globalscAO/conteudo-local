@@ -33,7 +33,7 @@ export default function Header() {
             className="object-contain"
           />
         </Link>
-        <ul className="flex gap-4 items-center">
+        <ul className="flex gap-4 items-center max-lg:hidden">
           {link.map((item, index) => (
             <li key={index}>
               <button className="font-semibold px-8 py-2 cursor-pointer hover:bg-white/10 rounded-md transition-colors duration-300">

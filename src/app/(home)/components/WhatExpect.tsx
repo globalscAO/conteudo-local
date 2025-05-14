@@ -2,21 +2,21 @@ import Image from "next/image";
 
 export default function WhatExpect() {
   return (
-    <section className="flex w-full bg-gradient-to-t from-white to-white/70  justify-center items-center px-24 py-12">
-      <div className="w-full max-w-5xl flex flex-row-reverse gap-12 items-center flex-wrap">
+    <section className="flex w-full bg-gradient-to-t from-white to-white/70 justify-center items-center px-24 max-lg:px-8 py-12">
+      <div className="w-full max-w-5xl flex flex-row-reverse gap-12 max-lg:gap-8 items-center flex-wrap">
         <Image
           src={"/plenaria/3.JPG"}
           alt={""}
           width={500}
           height={400}
-          className="rounded-lg object-cover w-1/2 max-w-md"
+          className="rounded-lg object-cover w-1/2 max-lg:w-full max-w-md"
         />
 
-        <div className="flex flex-col gap-2 w-1/2">
+        <div className="flex flex-col gap-2 max-lg:gap-4 w-1/2 max-lg:w-full max-lg:items-center max-lg:text-center">
           <span className="main-title">
             O que esperar?
           </span>
-          <p className="text-primary">
+          <p className="text-primary max-lg:text-justify">
             Com a publicação do Decreto Presidencial nº 271/20 de 20 de Outubro,
             foram estabelecidas diretrizes para a implementação do conteúdo
             local no setor de Petróleo em Angola, tornando este sector num

@@ -2,21 +2,19 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="flex w-full bg-gradient-to-b from-white to-white/70  justify-center items-center px-24 py-12">
-      <div className="w-full max-w-5xl flex gap-12                                                                                                                                                                                                                       items-center flex-wrap">
+    <section className="flex w-full bg-gradient-to-b from-white to-white/70  justify-center items-center px-24 max-lg:px-8 py-12">
+      <div className="w-full max-w-5xl flex max-lg:gap-8 gap-12 items-center flex-wrap">
         <Image
           src={"/plenaria/1.JPG"}
           alt={""}
           width={500}
           height={400}
-          className="rounded-lg object-cover w-1/2 max-w-md"
+          className="rounded-lg object-cover w-1/2 max-lg:w-full max-w-md"
         />
 
-        <div className="flex flex-col gap-2 w-1/2">
-          <span className="main-title">
-            Sobre o evento
-          </span>
-          <p className="text-primary">
+        <div className="flex flex-col gap-2 max-lg:gap-4 w-1/2 max-lg:w-full max-lg:items-center">
+          <span className="main-title">Sobre o evento</span>
+          <p className="text-primary max-lg:text-justify">
             O Fórum sobre{" "}
             <span className="font-bold">
               O Impacto do Setor Financeiro no Conteúdo Local

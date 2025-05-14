@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="px-24 py-12 flex flex-col items-center justify-center bg-primary w-full">
-      <nav className="w-full max-w-5xl flex flex-col gap-8 text-white">
-        <div className="flex justify-between items-center w-full ">
+    <footer className="px-24 py-12 max-lg:px-8 flex flex-col items-center justify-center bg-primary w-full">
+      <nav className="w-full max-w-5xl flex flex-col gap-8 items-center text-white">
+        <div className="flex lg:justify-between items-center w-full flex-wrap gap-8 ">
           <div className="flex flex-col gap-2 w-72">
             <Image
               src={"/logo.png"}
-              alt={"Logotipo"}
+              alt={"Logotipo"}  
               width={80}
               height={40}
             />
@@ -17,17 +18,26 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-4 text-sm">
+          <div className="flex items-center gap-4 text-sm max-lg:flex-wrap">
             <ul className="flex flex-col gap-2">
               <li className="font-bold">CONTACTOS</li>
-              <li>(+244) 222 731 031</li>
-              <li>(+244) 941 064 919</li>
+              <li>
+                <Link href={"tel:+244222731031"}>(+244) 222 731 031</Link>
+              </li>
+              <li>
+                <Link href={"tel:+244941064919"}>(+244) 941 064 919</Link>
+              </li>
             </ul>
 
             <ul className="flex flex-col gap-2">
               <li className="font-bold">OUTRAS SOLUÇÕES</li>
-              <li>Global Academy</li>
-              <li>Global Service Corporation</li>
+              <li>
+                <Link href={"https://academy.globalsc.ao"}>Global Academy</Link>
+              </li>
+              <li>
+                <Link href={"https://globalsc.ao"}></Link>Global Service
+                Corporation
+              </li>
             </ul>
           </div>
         </div>
