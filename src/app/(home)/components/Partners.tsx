@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function Partners() {
-  const partners = ["", "", "", "", "", "", "", "", "", ""];
+  const partners = ["/", "/", "/", "/", "/", "/", "/", "/", "/", "/"];
   return (
     <div className="w-full bg-secondary/70 text-white flex justify-center items-center px-12 py-8">
       <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-4">
@@ -16,6 +16,17 @@ export default function Partners() {
           loop
           slidesPerView={5}
           autoplay
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            328: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
           modules={[Autoplay]}
           className="w-full">
           {partners.map((item, index) => (

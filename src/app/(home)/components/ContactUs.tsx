@@ -2,7 +2,7 @@ import { CircleChevronRight } from "lucide-react";
 
 export default function ContactUs() {
   return (
-    <div className="px-12 py-24 max-lg:p-0 max-lg:py-8 flex items-center justify-center bg-gradient-to-t from-white to-white/70">
+    <div className="px-8 py-24 max-lg:p-0 max-lg:py-8 flex items-center justify-center bg-gradient-to-t from-white to-white/70">
       <div className="flex items-center max-lg:flex-col justify-center gap-24 max-lg:gap-8 max-w-5xl">
         <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-1/2 max-lg:w-full text-primary">
           <div>
