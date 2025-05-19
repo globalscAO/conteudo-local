@@ -6,8 +6,7 @@ export default function HowToParticipate({
   externalRef,
 }: {
   externalRef?: (el: HTMLDivElement) => void;
-}
-) {
+}) {
   const steps = [
     {
       stepNumber: 1,
@@ -23,7 +22,7 @@ export default function HowToParticipate({
     },
     {
       stepNumber: 3,
-      title: "Verfique os seus dados",
+      title: "Verifique os seus dados",
       description: `Certifique-se de que todos os dados estão corretos antes de enviar o formulário.`,
     },
     {
@@ -39,11 +38,13 @@ export default function HowToParticipate({
   ];
 
   return (
-    <div ref={externalRef} className="w-full flex items-center justify-center px-12 py-8 bg-gradient-to-b from-white to-white/70 ">
+    <div
+      ref={externalRef}
+      className="w-full flex items-center justify-center px-12 py-8 bg-gradient-to-t from-secondary-blue to-primary/70 ">
       <div className="flex flex-col items-center justify-center gap-12 max-w-5xl">
         <div className="flex flex-col justify-center  gap-2 items-center text-center">
           <h1 className="main-title">Quer saber como pode fazer parte?</h1>
-          <p className="text-primary text-sm">
+          <p className="text-white text-sm">
             Siga os passos aqui à baixo e faça logo a sua inscrição.
           </p>
         </div>
@@ -51,13 +52,15 @@ export default function HowToParticipate({
         <ul className="flex-wrap flex gap-8 items-center justify-center">
           {steps.map((item, index) => (
             <React.Fragment key={index}>
-              <li className="flex flex-col text-center gap-2 items-center justify-center bg-white border-4 border-primary text-primary rounded-2xl py-4 px-4 max-w-58 h-50">
-                <span className="text-center rounded-full text-xl text-primary font-semibold">
+              <li className="flex flex-col text-center gap-2 items-center justify-center bg-secondary-blue border-4 border-primary text-white rounded-2xl py-4 px-4 max-w-58 h-50">
+                <span className="text-center rounded-full text-xl text-white  font-semibold">
                   {item.stepNumber}
                 </span>
 
                 <div className="flex flex-col text-center items-center">
-                  <span className="font-semibold text-sm">{item.title.toUpperCase()}</span>
+                  <span className="font-semibold text-sm">
+                    {item.title.toUpperCase()}
+                  </span>
                   <p className="text-xs">{item.description}</p>
                 </div>
               </li>
@@ -77,7 +80,7 @@ export default function HowToParticipate({
 
         <Link
           href={"/register"}
-          className="w-full text-center max-w-sm bg-primary px-12 py-4 font-semibold rounded-lg hover:bg-transparent border border-primary hover:text-primary transition-colors duration-300 text-white">
+          className="w-full text-center max-w-sm bg-primary px-12 py-4 font-semibold rounded-lg hover:bg-transparent border border-primary hover:border-white hover:text-white transition-colors duration-300 text-white">
           Fazer Inscrição
         </Link>
       </div>

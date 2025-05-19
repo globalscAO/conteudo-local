@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #002363;
+  --color-primary: #001f4b;
+  --color-secondary-blue: #0064bd;
   --color-secondary: #c9741f;
-  --color-gold-one: #ae8625;
-  --color-gold-two: #f7ef8a;
-  --color-gold-three: #d2ac47;
+  --color-gold-one: #fdc42d;
+  --color-gold-two: #fffa84;
+  --color-gold-three: #efae00;
 }
 
 .main-title {
-  @apply bg-secondary/20 w-fit text-secondary px-6 py-2 rounded-lg font-bold;
+  @apply bg-gold-one/20 text-xl w-fit text-gold-two px-6 py-2 rounded-lg font-bold;
 }
 
 .gold {

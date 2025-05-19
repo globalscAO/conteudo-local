@@ -3,7 +3,7 @@ import Header from "../ui/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-[url(/background.png)] bg-cover">
+    <div className="bg-secondary-blue">
       <Header />
       {children}
       <Footer />

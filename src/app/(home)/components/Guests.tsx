@@ -4,8 +4,7 @@ export default function Guests({
   externalRef,
 }: {
   externalRef?: (el: HTMLDivElement) => void;
-}
-) {
+}) {
   const guests = [
     {
       name: "Mário Nascimento",
@@ -47,7 +46,7 @@ export default function Guests({
       imgUrl: "/guests/luis_goncalves.jpeg",
       title: "CEO do BFA - Banco de Fomento Angola",
     },
-     {
+    {
       name: "Filipa Vilhena",
       imgUrl: "/guests/filipa_vilhena.jpeg",
       title: "Vice-Presidente da AECIPA",
@@ -55,11 +54,13 @@ export default function Guests({
   ];
 
   return (
-    <div ref={externalRef} className="bg-[#EFEFEF]/90 flex justify-center items-center px-12 py-24">
+    <div
+      ref={externalRef}
+      className="bg-gradient-to-t from-secondary-blue to-primary/70 flex justify-center items-center px-12 py-24">
       <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
         <h1 className="main-title">Destaque das ilustres figuras</h1>
 
-        <p className="text-sm text-primary font-semibold max-w-4xl">
+        <p className="text-sm text-white font-semibold max-w-4xl">
           Nesta seção, prestamos homenagem às personalidades de prestígio que,
           com sua trajetória exemplar e liderança inspiradora, contribuem
           significativamente para o fortalecimento do setor e da sociedade.
@@ -69,15 +70,17 @@ export default function Guests({
           {guests.map((item, index) => (
             <li key={index}>
               <div className="w-50 flex flex-col items-center justify-center gap-4">
-                <Image
-                  src={item.imgUrl}
-                  alt={item.name}
-                  width={200}
-                  height={200}
-                  className="w-50 h-50 rounded-full object-cover object-top border-5 border-secondary"
-                />
+                <div className="gold p-1 w-50 h-50  rounded-full">
+                  <Image
+                    src={item.imgUrl}
+                    alt={item.name}
+                    width={200}
+                    height={200}
+                    className="h-full w-full rounded-full object-cover object-top"
+                  />
+                </div>
 
-                <div className="text-primary">
+                <div className="text-white">
                   <p className="text-lg font-bold">{item.name}</p>
                   <p>{item.title}</p>
                 </div>

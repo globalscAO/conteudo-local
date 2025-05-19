@@ -15,9 +15,9 @@ export default function Partners({
   return (
     <div ref={externalRef}
       id="parceiros"
-    className="w-full bg-secondary/70 text-white flex justify-center items-center px-12 py-8">
-      <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-4">
-        <h1 className="font-bold text-lg">Parceiros</h1>
+    className="w-full bg-primary text-white flex justify-center items-center px-12 py-12">
+      <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-8">
+        <h1 className="font-bold text-2xl">Parceiros</h1>
 
         <Swiper
           loop
@@ -39,11 +39,11 @@ export default function Partners({
           {partners.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="">
-              <div className="border-3 mx-auto border-primary rounded-md bg-white w-32 h-32 p-4 flex items-center justify-center">
+              className="pb-10">
+              <div className="border-7 mx-auto shadow-xl shadow-gold-two/70 rounded-md bg-white w-44 h-40 p-4 flex items-center justify-center">
                 <Image
-                  width={100}
-                  height={100}
+                  width={400}
+                  height={400}
                   src={item}
                   alt="Partner"
                 />

@@ -34,6 +34,11 @@ export default function Header() {
       onClick: () => handleScrollToSection("parceiros"),
     },
     {
+      title: "Agenda",
+      id: "Agenda",
+      onClick: () => handleScrollToSection("agenda"),
+    },
+    {
       title: "Contactos",
       id: "contactos",
       onClick: () => handleScrollToSection("contactos"),
@@ -49,7 +54,7 @@ export default function Header() {
             alt={""}
             width={80}
             height={40}
-            className="object-contain"
+            className="object-contain max-lg:w-16"
           />
         </Link>
         <ul className="flex gap-4 items-center max-lg:hidden">
@@ -63,11 +68,11 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <Link
+        {/*     <Link
           href={"/register"}
           className="bg-secondary px-4 py-2  font-semibold rounded-md hover:bg-transparent border border-secondary hover:text-secondary transition-colors duration-300">
           Inscrever-se
-        </Link>{" "}
+        </Link>{" "} */}
       </div>
     </header>
   );
