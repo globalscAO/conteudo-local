@@ -11,7 +11,7 @@ export default function Partners({
 	externalRef?: (el: HTMLDivElement) => void
 }
 ) {
-  const partners = ["/", "/", "/", "/", "/", "/", "/", "/", "/", "/"];
+  const partners = ["/partners/1.png", "/partners/2.png"];
   return (
     <div ref={externalRef}
       id="parceiros"
@@ -31,11 +31,11 @@ export default function Partners({
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 2,
             },
           }}
           modules={[Autoplay]}
-          className="w-full">
+          className="w-full max-w-xl">
           {partners.map((item, index) => (
             <SwiperSlide
               key={index}
