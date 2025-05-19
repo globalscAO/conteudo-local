@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function Guests() {
+export default function Guests({
+  externalRef,
+}: {
+  externalRef?: (el: HTMLDivElement) => void;
+}
+) {
   const guests = [
     {
       name: "Mário Nascimento",
@@ -50,7 +55,7 @@ export default function Guests() {
   ];
 
   return (
-    <div className="bg-[#EFEFEF]/90 flex justify-center items-center px-12 py-12">
+    <div ref={externalRef} className="bg-[#EFEFEF]/90 flex justify-center items-center px-12 py-24">
       <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
         <h1 className="main-title">Destaque das ilustres figuras</h1>
 

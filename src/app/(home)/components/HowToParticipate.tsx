@@ -2,34 +2,44 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function HowToParticipate() {
+export default function HowToParticipate({
+  externalRef,
+}: {
+  externalRef?: (el: HTMLDivElement) => void;
+}
+) {
   const steps = [
     {
       stepNumber: 1,
       title: "Acesse o site",
       description:
-        "Vá para o menu e clique em 'Cursos' e depois em 'Ver todos'.",
+        "Vá para o menu e clique em 'Inscrever-se' ou em 'Participar'.",
     },
-    
+
     {
       stepNumber: 2,
-      title: "Fazer inscrição",
-      description: `Clique no botão "Inscrever-se" que levará para o formulário de inscrição.`,
+      title: "Preencher o formulário",
+      description: `Na página de inscrição, preencha o formulário de inscrição com os seus dados.`,
     },
     {
       stepNumber: 3,
-      title: "Preencher formulário",
-      description: `Em seguida preencha o formulário de inscrição, escolha o curso.`,
+      title: "Verfique os seus dados",
+      description: `Certifique-se de que todos os dados estão corretos antes de enviar o formulário.`,
     },
     {
       stepNumber: 4,
-      title: "E pronto!",
-      description: `Depois de enviar o formulário, entraremos em contacto.`,
+      title: "Email de Confirmação",
+      description: `Você receberá um email de confirmação com os detalhes da sua inscrição.`,
+    },
+    {
+      stepNumber: 5,
+      title: "Aguarde a nossa resposta",
+      description: `Aguarde a nossa resposta com mais informações sobre o evento e o seu ticket.`,
     },
   ];
 
   return (
-    <div className="w-full flex items-center justify-center px-12 py-8 bg-gradient-to-b from-white to-white/70 ">
+    <div ref={externalRef} className="w-full flex items-center justify-center px-12 py-8 bg-gradient-to-b from-white to-white/70 ">
       <div className="flex flex-col items-center justify-center gap-12 max-w-5xl">
         <div className="flex flex-col justify-center  gap-2 items-center text-center">
           <h1 className="main-title">Quer saber como pode fazer parte?</h1>
@@ -41,13 +51,14 @@ export default function HowToParticipate() {
         <ul className="flex-wrap flex gap-8 items-center justify-center">
           {steps.map((item, index) => (
             <React.Fragment key={index}>
-              <li className="flex flex-col text-center gap-2 items-center justify-center bg-white border-4 border-primary text-primary rounded-2xl py-4 px-4 w-52">
-                <span className="text-center rounded-full text-3xl text-primary font-semibold">
+              <li className="flex flex-col text-center gap-2 items-center justify-center bg-white border-4 border-primary text-primary rounded-2xl py-4 px-4 max-w-58 h-50">
+                <span className="text-center rounded-full text-xl text-primary font-semibold">
                   {item.stepNumber}
                 </span>
 
                 <div className="flex flex-col text-center items-center">
-                  <span className="font-semibold">{item.title}</span>
+                  <span className="font-semibold text-sm">{item.title.toUpperCase()}</span>
+                  <p className="text-xs">{item.description}</p>
                 </div>
               </li>
 
@@ -57,6 +68,7 @@ export default function HowToParticipate() {
                   alt={"Arrow Step"}
                   width={100}
                   height={50}
+                  className="max-lg:hidden"
                 />
               )}
             </React.Fragment>
@@ -64,8 +76,8 @@ export default function HowToParticipate() {
         </ul>
 
         <Link
-          href={"/"}
-          className="bg-primary px-12 py-4 font-semibold rounded-md hover:bg-transparent border border-primary hover:text-primary transition-colors duration-300 text-white">
+          href={"/register"}
+          className="w-full text-center max-w-sm bg-primary px-12 py-4 font-semibold rounded-lg hover:bg-transparent border border-primary hover:text-primary transition-colors duration-300 text-white">
           Fazer Inscrição
         </Link>
       </div>

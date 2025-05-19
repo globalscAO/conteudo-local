@@ -1,9 +1,14 @@
 import Image from "next/image";
 
-export default function WhatExpect() {
-  return (
-    <section className="flex w-full bg-gradient-to-t from-white to-white/70 justify-center items-center px-24 max-lg:px-8 py-12">
-      <div className="w-full max-w-5xl flex flex-row-reverse gap-12 max-lg:gap-8 items-center flex-wrap">
+export default function WhatExpect({
+	externalRef,
+}: {
+	externalRef?: (el: HTMLDivElement) => void
+}
+) {
+return (
+    <section ref={externalRef} className="flex w-full bg-gradient-to-t from-white to-white/70 justify-center items-center px-12 max-lg:px-8 py-24">
+      <div className="w-full max-w-5xl flex flex-row-reverse gap-12 justify-center max-lg:gap-8 items-center flex-wrap">
         <Image
           src={"/plenaria/3.JPG"}
           alt={""}

@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function SpecialGuests() {
+export default function SpecialGuests({
+  externalRef,
+}: {
+  externalRef?: (el: HTMLDivElement) => void;
+}) {
   const guests = [
     {
       name: "NJ AYUK",
@@ -15,7 +19,10 @@ export default function SpecialGuests() {
   ];
 
   return (
-    <div className="px-12 py-8 flex items-center justify-center bg-gradient-to-b from-white to-white/70">
+    <div
+      ref={externalRef}
+      id="convidados"
+      className="px-12 py-24 max-lg:py-8 flex items-center justify-center bg-gradient-to-b from-white to-white/70">
       <div className="flex max-w-5xl w-full flex-col gap-8 items-center justify-center text-center">
         <h1 className="main-title">Convidados especiais</h1>
         <p className="text-sm text-primary font-semibold max-w-4xl">

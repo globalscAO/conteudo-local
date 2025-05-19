@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react"
 
 const TimerLeft: React.FC = () => {
-	const eventDate = new Date("2025-10-01T00:00:00").getTime()
+	const eventDate = new Date("2025-07-17T00:00:00").getTime()
 
 	const calculateTimeLeft = useCallback(() => {
 		const difference = eventDate - Date.now()

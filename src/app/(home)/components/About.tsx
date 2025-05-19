@@ -1,9 +1,13 @@
 import Image from "next/image";
 
-export default function About() {
+export default function About({
+	externalRef,
+}: {
+	externalRef?: (el: HTMLDivElement) => void
+}) {
   return (
-    <section className="flex w-full bg-gradient-to-b from-white to-white/70  justify-center items-center px-24 max-lg:px-8 py-12">
-      <div className="w-full max-w-5xl flex max-lg:gap-8 gap-12 items-center flex-wrap">
+    <section id="sobre" ref={externalRef} className="flex w-full bg-gradient-to-b from-white to-white/70  justify-center items-center px-12 max-lg:px-8 py-24">
+      <div className="w-full max-w-5xl flex max-lg:gap-8 gap-12 items-center justify-center flex-wrap">
         <Image
           src={"/plenaria/1.JPG"}
           alt={""}

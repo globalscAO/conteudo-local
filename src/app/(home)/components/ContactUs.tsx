@@ -1,8 +1,15 @@
 import { CircleChevronRight } from "lucide-react";
 
-export default function ContactUs() {
+export default function ContactUs({
+  externalRef,
+}: {
+  externalRef?: (el: HTMLDivElement) => void;
+}) {
   return (
-    <div className="px-8 py-24 max-lg:p-0 max-lg:py-8 flex items-center justify-center bg-gradient-to-t from-white to-white/70">
+    <div
+      ref={externalRef}
+      id="contactos"
+      className="px-8 py-24 max-lg:p-0 max-lg:py-8 flex items-center justify-center bg-gradient-to-b from-white/70 to-[#EFEFEF]/90 ">
       <div className="flex items-center max-lg:flex-col justify-center gap-24 max-lg:gap-8 max-w-5xl">
         <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-1/2 max-lg:w-full text-primary">
           <div>
@@ -15,7 +22,6 @@ export default function ContactUs() {
 
           <CircleChevronRight />
         </div>
-
 
         <form className="bg-primary/25 text-primary p-8 flex flex-col items-center w-2/5 max-lg:w-full lg:rounded-lg gap-6">
           <h1 className="font-semibold text-center max-lg:text-lg">
@@ -38,7 +44,7 @@ export default function ContactUs() {
             className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
           />
           <textarea
-            placeholder="Contacto telefónico"
+            placeholder="Assunto"
             className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
             rows={3}
           />

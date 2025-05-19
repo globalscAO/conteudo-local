@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TimerLeft from "./TimerLeft";
 
 export default function Hero() {
@@ -20,9 +21,9 @@ export default function Hero() {
             <br /> O IMPACTO DO SECTOR FINANCEIRO NO CONTEÚDO LOCAL
           </h1>
 
-          <button className="bg-secondary px-8 py-2  font-semibold rounded-md hover:bg-transparent border border-secondary hover:text-secondary transition-colors duration-300 text-white cursor-pointer">
+          <Link href={"/register"} className="bg-secondary px-8 py-2  font-semibold rounded-md hover:bg-transparent border border-secondary hover:text-secondary transition-colors duration-300 text-white cursor-pointer">
             Participar
-          </button>
+          </Link>
 
           <TimerLeft />
         </div>

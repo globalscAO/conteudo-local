@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function Discussions() {
+export default function Discussions({
+  externalRef,
+}: {
+  externalRef?: (el: HTMLDivElement) => void;
+}
+) {
   const subjects = [
     {
       description: `Como o sector financeiro pode apoiar as empresas do sector de petróleos a implementação do conteúdo local, fornecendo soluções de tesouraria, e assessoria técnica.`,
@@ -20,7 +25,7 @@ export default function Discussions() {
     },
   ];
   return (
-    <div className="flex px-12 py-12 max-lg:pb-0 items-center justify-center w-full bg-gradient-to-t from-white to-white/70">
+    <div ref={externalRef} className="flex px-12 py-12 items-center justify-center w-full bg-gradient-to-t from-white to-white/70">
       <div className="max-w-5xl w-full flex flex-col gap-8 text-primary text-center items-center">
         <div className="flex flex-col text-center items-center gap-4">
           <h1 className="main-title">Principais pontos de discussão</h1>
