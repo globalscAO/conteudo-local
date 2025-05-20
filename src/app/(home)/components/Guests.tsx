@@ -56,34 +56,34 @@ export default function Guests({
   return (
     <div
       ref={externalRef}
-      className="bg-gradient-to-b from-secondary-blue to-primary/70 flex justify-center items-center px-12 py-24">
-      <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
-        <h1 className="main-title">Destaque das ilustres figuras</h1>
+      className="w-full bg-[url(/efeito-3.png)] bg-cover">
+      <div className="bg-gradient-to-t from-gray-300/70 to-white/90 flex justify-center items-center px-12 py-24 max-lg:py-8">
+        <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
+          <h1 className="main-title">Destaque das ilustres figuras</h1>
 
-        
+          <ul className="flex flex-wrap gap-8 justify-center">
+            {guests.map((item, index) => (
+              <li key={index}>
+                <div className="w-60 flex flex-col items-center justify-center gap-4">
+                  <div className="gold p-1 w-60 h-60  rounded-full">
+                    <Image
+                      src={item.imgUrl}
+                      alt={item.name}
+                      width={300}
+                      height={300}
+                      className="h-full w-full rounded-full object-cover object-top"
+                    />
+                  </div>
 
-        <ul className="flex flex-wrap gap-8 justify-center">
-          {guests.map((item, index) => (
-            <li key={index}>
-              <div className="w-50 flex flex-col items-center justify-center gap-4">
-                <div className="gold p-1 w-50 h-50  rounded-full">
-                  <Image
-                    src={item.imgUrl}
-                    alt={item.name}
-                    width={200}
-                    height={200}
-                    className="h-full w-full rounded-full object-cover object-top"
-                  />
+                  <div className="text-primary">
+                    <p className="text-lg font-bold">{item.name}</p>
+                    <p>{item.title}</p>
+                  </div>
                 </div>
-
-                <div className="text-white">
-                  <p className="text-lg font-bold">{item.name}</p>
-                  <p>{item.title}</p>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

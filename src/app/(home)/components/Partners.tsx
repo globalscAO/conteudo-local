@@ -15,7 +15,7 @@ export default function Partners({
     <div
       ref={externalRef}
       id="parceiros"
-      className="w-full bg-primary text-white flex justify-center items-center px-12 py-12">
+      className="w-full bg-primary text-white flex justify-center items-center px-12 py-12 max-lg:py-8">
       <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-8">
         <h1 className="font-bold text-2xl">Parceiros</h1>
 
@@ -37,7 +37,7 @@ export default function Partners({
             <SwiperSlide
               key={index}
               className="pb-10">
-              <div className="border-7 mx-auto shadow-xl shadow-gold-two/70 rounded-md bg-white w-44 h-40 p-4 flex items-center justify-center">
+              <div className="border-7 mx-auto  rounded-md bg-white w-44 h-40 p-4 flex items-center justify-center">
                 <Image
                   width={400}
                   height={400}

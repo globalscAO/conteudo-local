@@ -3,14 +3,14 @@
 @theme {
   --color-primary: #001f4b;
   --color-secondary-blue: #0064bd;
-  --color-secondary: #c9741f;
+  --color-secondary: #f5f5f5;
   --color-gold-one: #fdc42d;
   --color-gold-two: #fffa84;
   --color-gold-three: #efae00;
 }
 
 .main-title {
-  @apply bg-gold-one/20 text-2xl w-fit text-gold-two px-6 py-2 rounded-lg font-bold;
+  @apply bg-primary/20 text-2xl w-fit text-primary px-6 py-2 rounded-lg font-bold;
 }
 
 .gold {

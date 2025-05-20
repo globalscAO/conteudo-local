@@ -40,49 +40,51 @@ export default function HowToParticipate({
   return (
     <div
       ref={externalRef}
-      className="w-full flex items-center justify-center px-12 py-8 bg-gradient-to-b from-secondary-blue to-primary/70 ">
-      <div className="flex flex-col items-center justify-center gap-12 max-w-5xl">
-        <div className="flex flex-col justify-center  gap-2 items-center text-center">
-          <h1 className="main-title">Quer saber como pode fazer parte?</h1>
-          <p className="text-white text-sm">
-            Siga os passos aqui à baixo e faça logo a sua inscrição.
-          </p>
-        </div>
+      className="w-full bg-[url(/efeito-3.png)] bg-cover">
+      <div className="w-full flex items-center justify-center px-12 py-24 max-lg:py-8 bg-gradient-to-b from-secondary to-white/70 ">
+        <div className="flex flex-col items-center justify-center gap-12 max-w-5xl">
+          <div className="flex flex-col justify-center  gap-2 items-center text-center">
+            <h1 className="main-title">Quer saber como pode fazer parte?</h1>
+            <p className="text-primary text-sm">
+              Siga os passos aqui à baixo e faça logo a sua inscrição.
+            </p>
+          </div>
 
-        <ul className="flex-wrap flex gap-8 items-center justify-center">
-          {steps.map((item, index) => (
-            <React.Fragment key={index}>
-              <li className="flex flex-col text-center gap-2 items-center justify-center bg-secondary-blue border-4 border-primary text-white rounded-2xl py-4 px-4 max-w-58 h-50">
-                <span className="text-center rounded-full text-xl text-white  font-semibold">
-                  {item.stepNumber}
-                </span>
-
-                <div className="flex flex-col text-center items-center">
-                  <span className="font-semibold text-sm">
-                    {item.title.toUpperCase()}
+          <ul className="flex-wrap flex gap-8 items-center justify-center">
+            {steps.map((item, index) => (
+              <React.Fragment key={index}>
+                <li className="flex flex-col text-center gap-2 items-center justify-center bg-secondary border-4 border-primary text-primary rounded-2xl py-4 px-4 max-w-58 h-50">
+                  <span className="text-center rounded-full text-xl text-primary  font-semibold">
+                    {item.stepNumber}
                   </span>
-                  <p className="text-xs">{item.description}</p>
-                </div>
-              </li>
 
-              {steps && (index + 1) % 3 !== 0 && index < steps.length - 1 && (
-                <Image
-                  src={"/arrow-step.svg"}
-                  alt={"Arrow Step"}
-                  width={100}
-                  height={50}
-                  className="max-lg:hidden"
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </ul>
+                  <div className="flex flex-col text-center items-center">
+                    <span className="font-semibold text-sm">
+                      {item.title.toUpperCase()}
+                    </span>
+                    <p className="text-xs">{item.description}</p>
+                  </div>
+                </li>
 
-        <Link
-          href={"/register"}
-          className="w-full text-center max-w-sm bg-primary px-12 py-4 font-semibold rounded-lg hover:bg-transparent border border-primary hover:border-white hover:text-white transition-colors duration-300 text-white">
-          Fazer Inscrição
-        </Link>
+                {steps && (index + 1) % 3 !== 0 && index < steps.length - 1 && (
+                  <Image
+                    src={"/arrow-step.svg"}
+                    alt={"Arrow Step"}
+                    width={100}
+                    height={50}
+                    className="max-lg:hidden"
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </ul>
+
+          <Link
+            href={"/register"}
+            className="w-full text-center max-w-sm bg-primary px-12 py-4 font-semibold rounded-lg hover:bg-transparent border-2 border-primary hover:border-primary hover:text-primary transition-colors duration-300 text-white">
+            Fazer Inscrição
+          </Link>
+        </div>
       </div>
     </div>
   );
