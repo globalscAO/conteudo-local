@@ -45,9 +45,6 @@ export default function HowToParticipate({
         <div className="flex flex-col items-center justify-center gap-12 max-w-5xl">
           <div className="flex flex-col justify-center  gap-2 items-center text-center">
             <h1 className="main-title">Quer saber como pode fazer parte?</h1>
-            <p className="text-primary text-sm">
-              Siga os passos aqui à baixo e faça logo a sua inscrição.
-            </p>
           </div>
 
           <ul className="flex-wrap flex gap-8 items-center justify-center">

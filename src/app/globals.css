@@ -10,7 +10,7 @@
 }
 
 .main-title {
-  @apply text-4xl lg:mb-2 max-lg:text-lg w-fit text-primary rounded-lg font-bold;
+  @apply text-4xl lg:mb-2 max-lg:text-2xl w-fit text-primary rounded-lg font-bold;
 }
 
 .gold {

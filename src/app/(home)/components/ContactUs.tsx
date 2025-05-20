@@ -1,6 +1,5 @@
 "use cient";
 
-import { CircleChevronRight } from "lucide-react";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
@@ -61,28 +60,23 @@ export default function ContactUs({
     <div
       ref={externalRef}
       id="contactos"
-      className="w-full bg-[url(/efeito-3.png)] bg-cover">
-      <div className="px-8 max-lg:p-0 py-24 max-lg:py-8 flex items-center justify-center bg-gradient-to-b from-secondary to-white/70 ">
-        <div className="flex items-center max-lg:flex-col justify-center gap-24 max-lg:gap-8 max-w-5xl">
-          <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-1/2 max-lg:w-full text-primary">
-            <div>
-              <h1 className="font-semibold">
-                QUESTÕES, PROPOSTAS OU SUGESTÕES?
-              </h1>
-              <p>
-                Preencha o formulário ao lado e entre em contacto conosco para
-                tirar dúvidas, solicitar informações ou iniciar uma conversa.
-              </p>
-            </div>
-
-            <CircleChevronRight />
+      className="w-full bg-[url(/efeito-3.png)] bg-cover ">
+      <div className="px-8 max-lg:p-0 py-12 max-lg:py-8 flex items-center justify-center bg-gradient-to-r from-secondary to-white/90 ">
+        <div className="flex items-center max-lg:flex-col justify-center gap-12 max-lg:gap-8 w-full  max-w-5xl">
+          <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-full max-lg:w-full text-primary">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31541.415242441934!2d13.234995199999998!3d-8.8163926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f24e8277acab%3A0x8bbb561fd5396f18!2sEPIC%20SANA%20Luanda%20Hotel!5e0!3m2!1spt-PT!2sao!4v1747755552205!5m2!1spt-PT!2sao"
+              allowFullScreen
+              loading="lazy"
+              className="w-full h-120 rounded-lg max-lg:hidden"
+              referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-gray-200 text-primary p-8 flex flex-col items-center w-3/5 max-lg:w-full lg:rounded-lg gap-6">
+            className="bg-gray-200 text-primary p-8 flex flex-col items-center max-w-md w-full lg:rounded-lg gap-6">
             <h1 className="font-semibold text-center max-lg:text-lg">
-              PREENCHA O FORMULÁRIO E ENTRE EM CONTACTO.
+              ENTRE EM CONTACTO.
             </h1>
 
             <div className="w-full">

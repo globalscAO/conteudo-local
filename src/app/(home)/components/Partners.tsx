@@ -17,7 +17,7 @@ export default function Partners({
       id="parceiros"
       className="w-full bg-primary text-white flex justify-center items-center px-12 py-12 max-lg:py-8">
       <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-8">
-        <h1 className="font-bold text-4xl">Parceiros</h1>
+        <h1 className="font-bold text-4xl max-lg:text-xl">Parceiros</h1>
 
         <Swiper
           loop
