@@ -90,7 +90,9 @@ export default function ContactUs({
                 type="text"
                 placeholder="Nome completo"
                 {...register("name", { required: "Nome é obrigatório" })}
-                className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70 focus:ring-red-500 focus:ring-1 "
+                className={`w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70 ${
+                  errors.name && "focus:ring-red-500 focus:ring-1"
+                }`}
               />
               {errors.name && (
                 <p
@@ -114,7 +116,9 @@ export default function ContactUs({
                     message: "Email inválido",
                   },
                 })}
-                className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70 focus:ring-red-500 focus:ring-1 "
+                className={`w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-primary/70 ${
+                  errors.email && "focus:ring-red-500 focus:ring-1"
+                }`}
               />
               {errors.email && (
                 <p
@@ -134,7 +138,9 @@ export default function ContactUs({
                 {...register("contact", {
                   required: "Contacto telefónico é obrigatório",
                 })}
-                className="w-full px-4 py-2 focus:ring-red-500 focus:ring-1 rounded-md outline-none bg-white/25 placeholder:text-primary/70"
+                className={`w-full px-4 py-2 ${
+                  errors.contact && "focus:ring-red-500 focus:ring-1"
+                } rounded-md outline-none bg-white/25 placeholder:text-primary/70`}
               />
               {errors.contact && (
                 <p
