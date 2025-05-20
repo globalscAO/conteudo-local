@@ -10,7 +10,7 @@
 }
 
 .main-title {
-  @apply bg-gold-one/20 text-xl w-fit text-gold-two px-6 py-2 rounded-lg font-bold;
+  @apply bg-gold-one/20 text-2xl w-fit text-gold-two px-6 py-2 rounded-lg font-bold;
 }
 
 .gold {

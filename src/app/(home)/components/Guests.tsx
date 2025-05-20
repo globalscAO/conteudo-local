@@ -56,7 +56,7 @@ export default function Guests({
   return (
     <div
       ref={externalRef}
-      className="bg-gradient-to-t from-secondary-blue to-primary/70 flex justify-center items-center px-12 py-24">
+      className="bg-gradient-to-b from-secondary-blue to-primary/70 flex justify-center items-center px-12 py-24">
       <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
         <h1 className="main-title">Destaque das ilustres figuras</h1>
 

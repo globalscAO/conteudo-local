@@ -6,29 +6,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function Partners({
-	externalRef,
+  externalRef,
 }: {
-	externalRef?: (el: HTMLDivElement) => void
-}
-) {
+  externalRef?: (el: HTMLDivElement) => void;
+}) {
   const partners = ["/partners/1.png", "/partners/2.png"];
   return (
-    <div ref={externalRef}
+    <div
+      ref={externalRef}
       id="parceiros"
-    className="w-full bg-primary text-white flex justify-center items-center px-12 py-12">
+      className="w-full bg-primary text-white flex justify-center items-center px-12 py-12">
       <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-8">
         <h1 className="font-bold text-2xl">Parceiros</h1>
 
         <Swiper
           loop
           slidesPerView={5}
-          autoplay
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           breakpoints={{
             0: {
               slidesPerView: 1,
-            },
-            328: {
-              slidesPerView: 2,
             },
             1024: {
               slidesPerView: 2,
@@ -45,7 +42,7 @@ export default function Partners({
                   width={400}
                   height={400}
                   src={item}
-                  alt="Partner"
+                  alt="Partner max-lg:w-50 max-lg:h-50"
                 />
               </div>
             </SwiperSlide>
