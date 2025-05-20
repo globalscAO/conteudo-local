@@ -60,11 +60,7 @@ export default function Guests({
       <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
         <h1 className="main-title">Destaque das ilustres figuras</h1>
 
-        <p className="text-sm text-white font-semibold max-w-4xl">
-          Nesta seção, prestamos homenagem às personalidades de prestígio que,
-          com sua trajetória exemplar e liderança inspiradora, contribuem
-          significativamente para o fortalecimento do setor e da sociedade.
-        </p>
+        
 
         <ul className="flex flex-wrap gap-8 justify-center">
           {guests.map((item, index) => (

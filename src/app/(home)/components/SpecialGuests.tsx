@@ -25,13 +25,8 @@ export default function SpecialGuests({
       className="px-12 py-24 max-lg:py-8 flex items-center justify-center bg-gradient-to-b from-secondary-blue to-primary/70">
       <div className="flex max-w-5xl w-full flex-col gap-8 items-center justify-center text-center">
         <h1 className="main-title">Convidados especiais</h1>
-        <p className="text-sm text-white font-semibold max-w-4xl">
-          Nesta seção, prestamos homenagem às personalidades de prestígio que,
-          com sua trajetória exemplar e liderança inspiradora, contribuem
-          significativamente para o fortalecimento do setor e da sociedade.
-        </p>
 
-        <ul className="flex flex-wrap gap-20 justify-center items-center">
+        <ul className="flex flex-wrap gap-20 justify-center items-start">
           {guests.map((item, index) => (
             <li key={index}>
               <div className="max-w-78 flex flex-col gap-4 text-white">
@@ -46,7 +41,7 @@ export default function SpecialGuests({
                 </div>
 
                 <div className="flex flex-col text-lg">
-                  <p className="font-bold">{item.name}</p>
+                  <p className="font-bold">{item.name.toUpperCase()}</p>
                   <p>{item.title}</p>
                 </div>
               </div>
