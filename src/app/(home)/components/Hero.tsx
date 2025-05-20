@@ -3,7 +3,7 @@ import TimerLeft from "./TimerLeft";
 
 export default function Hero() {
   return (
-    <section className="flex w-full items-center justify-center relative h-140 max-lg:h-100">
+    <section className="flex w-full items-center justify-center relative h-screen max-lg:h-100">
       <video
         src={
           "https://global-services-corporation.github.io/images/teaser_conteudo_local.mp4"

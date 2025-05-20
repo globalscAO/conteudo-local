@@ -9,7 +9,7 @@ export default function WhatExpect({
     <section
       ref={externalRef}
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
-      <div className="flex w-full bg-gradient-to-b from-white to-white/20 justify-center items-center px-12 max-lg:px-8 py-24">
+      <div className="flex w-full bg-gradient-to-r from-white to-white/70 justify-center items-center px-12 max-lg:px-8 py-24">
         <div className="w-full max-w-5xl flex flex-row-reverse gap-12 justify-center max-lg:gap-8 items-center flex-wrap">
           <Image
             src={"/cartaz.jpeg"}

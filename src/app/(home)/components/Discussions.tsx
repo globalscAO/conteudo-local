@@ -31,12 +31,6 @@ export default function Discussions({
         <div className="max-w-5xl w-full flex flex-col gap-8 text-primary text-center items-center">
           <div className="flex flex-col text-center items-center gap-4">
             <h1 className="main-title">Principais pontos de discussão</h1>
-            <p className="text-sm max-w-3xl max-lg:hidden">
-              Descubra os temas mais relevantes debatidos por líderes do setor
-              financeiro e da indústria petrolífera, com insights valiosos sobre
-              como a inovação e a colaboração estratégica estão a transformar o
-              conteúdo local em Angola.
-            </p>
           </div>
 
           <ul className="decoration-dashed text-left w-full flex flex-col gap-12">
@@ -53,7 +47,7 @@ export default function Discussions({
                     {item.description}
                   </p>
                 </div>
-             
+
                 <Image
                   src={item.imgUrl}
                   alt={"Discussion"}

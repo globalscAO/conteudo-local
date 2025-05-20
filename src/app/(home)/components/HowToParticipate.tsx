@@ -59,7 +59,7 @@ export default function HowToParticipate({
                   </span>
 
                   <div className="flex flex-col text-center items-center">
-                    <span className="font-semibold text-sm">
+                    <span className="font-bold text-sm">
                       {item.title.toUpperCase()}
                     </span>
                     <p className="text-xs">{item.description}</p>
