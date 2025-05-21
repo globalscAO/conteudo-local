@@ -50,7 +50,7 @@ export default function Register() {
             </p>
           </div>
 
-          <div className="flex gap-4 w-full">
+          <div className="flex gap-4 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
@@ -88,7 +88,7 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex gap-4 w-full">
+          <div className="flex gap-4 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
@@ -130,7 +130,7 @@ export default function Register() {
             )}
           </div>
 
-          <div className="flex gap-4 w-full">
+          <div className="flex gap-4 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
@@ -223,7 +223,7 @@ export default function Register() {
 
           <button
             type="submit"
-            className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-white duration-300 transition-colors border border-primary cursor-pointer">
+            className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-primary cursor-pointer">
             {isLoading ? (
               <span className="animate-pulse">Enviando...</span>
             ) : (

@@ -171,7 +171,7 @@ export default function ContactUs({
 
             <button
               type="submit"
-              className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primaryduration-300 transition-colors border border-secondary-blue cursor-pointer">
+              className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-secondary-blue cursor-pointer">
               {isLoading ? (
                 <span className="animate-pulse">Enviando...</span>
               ) : (
