@@ -53,7 +53,7 @@ export default function Discussions({
                   alt={"Discussion"}
                   width={250}
                   height={150}
-                  className="object-cover rounded-md lg:max-w-62.5 max-w-h-37.5 h-full w-full bg-white"
+                  className="object-cover rounded-md max-w-62.5 max-w-h-37.5 h-full w-full bg-white"
                 />
               </li>
             ))}

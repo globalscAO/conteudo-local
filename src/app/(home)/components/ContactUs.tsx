@@ -63,7 +63,7 @@ export default function ContactUs({
       className="w-full bg-[url(/efeito-3.png)] bg-cover ">
       <div className="px-8 max-lg:p-0 py-12 max-lg:py-8 flex items-center justify-center bg-gradient-to-r from-secondary to-white/90 ">
         <div className="flex items-center max-lg:flex-col justify-center gap-12 max-lg:gap-8 w-full  max-w-5xl">
-          <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-full max-lg:w-full text-primary text-primary">
+          <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-full max-lg:w-full text-primary">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31541.415242441934!2d13.234995199999998!3d-8.8163926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f24e8277acab%3A0x8bbb561fd5396f18!2sEPIC%20SANA%20Luanda%20Hotel!5e0!3m2!1spt-PT!2sao!4v1747755552205!5m2!1spt-PT!2sao"
               allowFullScreen
@@ -74,7 +74,7 @@ export default function ContactUs({
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-gray-200 text-primary text-primary p-8 flex flex-col items-center max-w-md w-full lg:rounded-lg gap-6">
+            className="bg-gray-200 text-primary p-8 flex flex-col items-center max-w-md w-full lg:rounded-lg gap-6">
             <h1 className="font-semibold text-center max-lg:text-lg">
               ENTRE EM CONTACTO
             </h1>
