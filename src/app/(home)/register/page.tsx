@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import countryList from "react-select-country-list";
@@ -14,6 +15,8 @@ type InputFields = {
   phoneNumber: string;
   nif: string;
   pack: string;
+  paymentMethod: string;
+  terms: boolean;
 };
 
 export default function Register() {
@@ -36,26 +39,59 @@ export default function Register() {
     }, 2000);
   };
 
+  const packages = [
+    {
+      name: "Individual",
+      price: "350.000,00 AOA",
+      description:
+        "Pacote de acesso individual ao evento, incluindo todas as palestras, workshops e atividades programadas.",
+    },
+    {
+      name: "3 Pax",
+      price: "1.000.000,00 AOA",
+      description:
+        "Pacote de acesso para 3 pessoas ao evento, incluindo todas as palestras, workshops e atividades programadas.",
+    },
+    {
+      name: "5 Pax",
+      price: "1.500.000,00 AOA",
+      description:
+        "Pacote de acesso para 5 pessoas ao evento, incluindo todas as palestras, workshops e atividades programadas.",
+    },
+  ];
+
+  const paymentMethods = [
+    {
+      name: "Multicaixa Express",
+      image: "/express.jpeg",
+    },
+    {
+      name: "Transferência Bancária",
+      image: "/transf-bank.png",
+    },
+    {
+      name: "Pagamento Pessoal",
+      image: "/pagamento.jpeg",
+    },
+  ];
+
   return (
     <div className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="flex flex-col justify-center items-center gap-8 lg:px-8 lg:py-12  bg-gradient-to-r from-secondary/80 to-white/80">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-gray-300 shadow-md shadow-gray-400/70 text-primary p-8 flex flex-col items-center w-3/5 max-lg:w-full lg:rounded-lg gap-6">
+          className="bg-white/70 shadow-md shadow-gray-400/70 text-primary p-8 flex flex-col items-center w-3/4 max-lg:w-full lg:rounded-lg gap-6">
           <div className="flex flex-col text-center max-w-lg">
             <h1 className="font-bold text-xl">FORMULÁRIO DE INSCRIÇÃO</h1>
-            <p className="text-sm">
-              Preencha o formulário abaixo para garantir a sua participação no
-              evento.
-            </p>
+            <p className="text-sm italic">Preencha os campos abaixo.</p>
           </div>
 
-          <div className="flex gap-4 w-full max-lg:flex-col">
+          <div className="flex gap-8 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="Primeiro nome"
-                className="w-full px-4 py-2 rounded-md outline-none placeholder:italic bg-white/25 placeholder:text-gray-500"
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none placeholder:italic bg-white/25 placeholder:text-gray-500 placeholder:text-xs"
                 {...register("firstname", {
                   required: "Nome completo é obrigatório",
                 })}
@@ -73,7 +109,7 @@ export default function Register() {
               <input
                 type="text"
                 placeholder="Sobrenome"
-                className="w-full px-4 py-2 rounded-md outline-none placeholder:italic bg-white/25 placeholder:text-gray-500"
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none placeholder:italic bg-white/25 placeholder:text-gray-500 placeholder:text-xs"
                 {...register("lastname", {
                   required: "Sobrenome é obrigatório",
                 })}
@@ -88,12 +124,12 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex gap-4 w-full max-lg:flex-col">
+          <div className="flex gap-8 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="NIF"
-                className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-gray-500"
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("nif", { required: "NIF é obrigatório" })}
               />
               {errors.nif && (
@@ -105,7 +141,7 @@ export default function Register() {
               <input
                 type="tel"
                 placeholder="Contacto telefónico"
-                className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-gray-500"
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("phoneNumber", {
                   required: "Contacto telefónico é obrigatório",
                 })}
@@ -122,7 +158,7 @@ export default function Register() {
             <input
               type="email"
               placeholder="Email"
-              className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-gray-500"
+              className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
               {...register("email", { required: "Email é obrigatório" })}
             />
             {errors.email && (
@@ -130,12 +166,12 @@ export default function Register() {
             )}
           </div>
 
-          <div className="flex gap-4 w-full max-lg:flex-col">
+          <div className="flex gap-8 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="Empresa"
-                className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-gray-500"
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("enterprise", {
                   required: "Empresa é obrigatória",
                 })}
@@ -151,7 +187,7 @@ export default function Register() {
               <input
                 type="text"
                 placeholder="Cargo"
-                className="w-full px-4 py-2 rounded-md outline-none bg-white/25 placeholder:text-gray-500"
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("jobPosition", {
                   required: "Cargo é obrigatório",
                 })}
@@ -165,10 +201,10 @@ export default function Register() {
           </div>
 
           <div className="w-full">
-            <div className="w-full px-4 py-2 rounded-md  bg-white/25 placeholder:text-gray-500">
+            <div className="w-full py-2 rounded-md bg-white/25">
               <select
                 {...register("country", { required: "País é obrigatório" })}
-                className="text-gray-500 w-full  outline-none cursor-pointer">
+                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 bg-white/25 placeholder:text-gray-500 text-xs outline-none cursor-pointer">
                 <option
                   disabled
                   selected
@@ -180,7 +216,7 @@ export default function Register() {
                   <option
                     key={option.value}
                     value={option.label}
-                    className="text-gray-500">
+                    className="text-gray-700">
                     {option.label}
                   </option>
                 ))}
@@ -192,28 +228,34 @@ export default function Register() {
             )}
           </div>
 
-          <div className="w-full">
-            <div className="w-full px-4 py-2 rounded-md bg-white/25 placeholder:text-gray-500">
-              <select
-                className="text-gray-500 w-full outline-none cursor-pointer"
-                {...register("pack", { required: "Pacote é obrigatório" })}>
-                <option
-                  disabled
-                  selected
-                  className="text-black"
-                  value="">
-                  Selecione o pacote
-                </option>
-                <option value="Individual - 350.000,00">
-                  Pacote Individual - 350.000,00 AOA
-                </option>
-                <option value="3 Pessoas - 1.000.000 AOA">
-                  Pacote de 3 Pessoas - 1.000.000,00 AOA
-                </option>
-                <option value="5 Pessoas - 1.500.000,00 AOA">
-                  Pacote de 5 Pessoas - 1.500.000,00 AOA
-                </option>
-              </select>
+          <div className="w-full flex flex-col gap-2">
+            <h1>
+              Selecione os pacotes que deseja adquirir
+              <span className="ml-2 text-red-500">*</span>
+            </h1>
+
+            <div className="flex flex-wrap items-center gap-4 w-full">
+              {packages.map((pack, index) => (
+                <label
+                  key={index}
+                  className="flex flex-col hover:bg-gold-one/70 cursor-pointer hover:shadow-md transition-all duration-300 hover:-translate-y-1 items-start p-4 rounded-md  gap-2 w-52 bg-secondary">
+                  <input
+                    type="radio"
+                    {...register("pack", {
+                      required: "Pacote é obrigatório",
+                    })}
+                    value={pack.name}
+                  />
+
+                  <div className="flex flex-col gap-2">
+                    <div>
+                      <h1 className="font-semibold">{pack.name}</h1>
+                      <h2 className="font-bold text-xl">{pack.price}</h2>
+                    </div>
+                    <p className="text-xs">{pack.description}</p>
+                  </div>
+                </label>
+              ))}
             </div>
 
             {errors.pack && (
@@ -221,9 +263,54 @@ export default function Register() {
             )}
           </div>
 
+          <div className="w-full flex flex-col gap-4">
+            <h1 className="text-sm">
+              Selecione o método de pagamento
+              <span className="ml-2 text-red-500">*</span>
+            </h1>
+
+            <div className="flex flex-wrap items-center gap-4 w-full">
+              {
+                paymentMethods.map((method, index) => (
+                  <label
+                    key={index}
+                    className="flex items-center w-fit gap-2 shadow bg-white rounded-md p-4 hover:bg-secondary/70 cursor-pointer hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <input type="radio" 
+                      {...register("paymentMethod", {
+                        required: "Método de pagamento é obrigatório",
+                      })}
+                    />
+                    <span className="text-sm">{method.name}</span>
+
+                    <Image
+                      src={method.image}
+                      alt="check"
+                      width={200}
+                      height={200}
+                      className="w-10 h-10 rounded-md object-cover"
+                    />
+                  </label>
+                ))
+              }
+            </div>
+
+            <label className="w-full flex items-center mt-4">
+              <input
+                type="checkbox"
+                className="w-4 h-4 accent-gold-one cursor-pointer"
+                {...register("terms", {
+                  required: "Aceitar os termos e condições é obrigatório",
+                })}
+              />
+              <span className="text-xs ml-2">
+                Aceitar os Termos e condições da Global Services Corporation.
+              </span>
+            </label>
+          </div>
+
           <button
             type="submit"
-            className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-primary cursor-pointer">
+            className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-primary cursor-pointer font-semibold">
             {isLoading ? (
               <span className="animate-pulse">Enviando...</span>
             ) : (
