@@ -1,57 +1,32 @@
-"use client";
+import { Metadata } from "next";
+import Home from "./Home";
 
-import { useEffect, useRef } from "react";
-import About from "./components/About";
-import ContactUs from "./components/ContactUs";
-import Discussions from "./components/Discussions";
-import Guests from "./components/Guests";
-import Hero from "./components/Hero";
-import HowToParticipate from "./components/HowToParticipate";
-import Partners from "./components/Partners";
-import SpecialGuests from "./components/SpecialGuests";
-import WhatExpect from "./components/WhatExpect";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+export const metadata: Metadata = {
+  title:
+    "Página Inicial - Fórum: O IMPACTO DO SECTOR FINANCEIRO NO CONTEÚDO LOCAL",
+  description: `Participe do Fórum sobre o impacto do setor financeiro no conteúdo local, uma extensão do debate realizado durante a 5ª Plenária da 4ª Edição da Mesa Redonda com CEOs. Descubra insights valiosos sobre o futuro do setor financeiro e sua relação com os negócios locais.`,
+  openGraph: {
+    type: "website",
+    title:
+      "Página Inicial - Fórum: O IMPACTO DO SECTOR FINANCEIRO NO CONTEÚDO LOCAL",
+    description: `Participe do Fórum sobre o impacto do setor financeiro no conteúdo local, uma extensão do debate realizado durante a 5ª Plenária da 4ª Edição da Mesa Redonda com CEOs. Entenda como o setor financeiro influencia os negócios locais.`,
+    url: "https://conteudolocal.globalsc.ao",
+    siteName: "Fórum Impacto Financeiro",
+    images: [
+      {
+        url: "/plenaria/1.JPG",
+        width: 1200,
+        height: 630,
+        alt: "Fórum sobre o impacto do setor financeiro no conteúdo local",
+      },
+    ],
+  },
+};
 
-gsap.registerPlugin(ScrollTrigger);
-
-export default function Home() {
-  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    sectionsRef.current.forEach((section) => {
-      if (section) {
-        gsap.fromTo(
-          section,
-          { opacity: 0, y: 10 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 80%",
-              end: "bottom 20%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-    });
-  }, []);
-
+export default function Page() {
   return (
-    <div>
-      <Hero />
-      <About externalRef={(el) => (sectionsRef.current[0] = el)} />
-      <Partners externalRef={(el) => (sectionsRef.current[1] = el)} />
-      <WhatExpect externalRef={(el) => (sectionsRef.current[2] = el)} />
-      <SpecialGuests externalRef={(el) => (sectionsRef.current[3] = el)} />
-      <Guests externalRef={(el) => (sectionsRef.current[4] = el)} />
-      <Discussions externalRef={(el) => (sectionsRef.current[5] = el)} />
-      <HowToParticipate externalRef={(el) => (sectionsRef.current[6] = el)} />
-      <ContactUs externalRef={(el) => (sectionsRef.current[7] = el)} />
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
