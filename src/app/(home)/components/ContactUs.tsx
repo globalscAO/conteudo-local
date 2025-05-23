@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
 
 type InputFields = {
   name: string;
@@ -18,6 +19,7 @@ export default function ContactUs({
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<InputFields>();
   const [isLoading, setIsLoading] = useState(false);
@@ -44,15 +46,16 @@ export default function ContactUs({
       .then((res) => {
         setIsLoading(true);
         if (res.ok) {
-          alert("Mensagem enviada com sucesso!");
+          toast.success("Mensagem enviada com sucesso!");
           setIsLoading(false);
+          reset();
         } else {
-          alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+          toast.error("Erro ao enviar a mensagem. Tente novamente mais tarde.");
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+        toast.error("Erro ao enviar a mensagem. Tente novamente mais tarde.");
       });
   };
 
@@ -61,6 +64,7 @@ export default function ContactUs({
       ref={externalRef}
       id="contactos"
       className="w-full bg-[url(/efeito-3.png)] bg-cover ">
+      <ToastContainer />
       <div className="px-8 max-lg:p-0 py-12 max-lg:py-8 flex items-center justify-center bg-gradient-to-r from-secondary to-white/90 ">
         <div className="flex items-center max-lg:flex-col justify-center gap-12 max-lg:gap-8 w-full  max-w-5xl">
           <div className="flex flex-col px-4 items-center justify-center text-center gap-4 w-full max-lg:w-full text-primary">

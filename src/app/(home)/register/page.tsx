@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import countryList from "react-select-country-list";
+import { toast, ToastContainer } from "react-toastify";
 
 type InputFields = {
   firstname: string;
@@ -23,6 +24,7 @@ export default function Register() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<InputFields>();
 
@@ -30,13 +32,73 @@ export default function Register() {
 
   const options = useMemo(() => countryList().getData(), []);
 
-  const onSubmit: SubmitHandler<InputFields> = (data) => {
-    setLoading(true);
-    console.log(data);
-
-    setTimeout(() => {
+  const enviarticket = async (data: InputFields) => {
+    try {
+      const response = await fetch("/api/send-ticket", {
+        method: "POST",
+        body: JSON.stringify({
+          email: "joelpitra44@gmail.com",
+          phoneNumber: "+244941064919",
+          header_1: `${data.firstname} ${data.lastname}`,
+          value_1: `${data.enterprise}`,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        console.error("Falha ao enviar o ticket, tente novamente.");
+      } else {
+        console.log("Ticket enviado com sucesso.");
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error("Error sending ticket:", error);
+    } finally {
       setLoading(false);
-    }, 2000);
+    }
+  };
+
+  const onSubmit: SubmitHandler<InputFields> = async (data) => {
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "https://gsc-website-api.onrender.com/send-email",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            firstname: data.firstname,
+            lastname: data.lastname,
+            jobPosition: data.jobPosition,
+            nif: data.nif,
+            enterprise: data.enterprise,
+            email: data.email,
+            phoneNumber: data.phoneNumber,
+            country: data.country,
+            package: data.pack,
+            paymentMethod: data.paymentMethod,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        toast.error("Falha ao enviar o email, tente novamente.");
+        setLoading(false);
+      } else {
+        toast.success("Email enviado com sucesso.");
+        enviarticket(data);
+        setLoading(false);
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      console.error("Error sending email:", error);
+    } finally {
+      reset();
+    }
   };
 
   const packages = [
@@ -62,36 +124,34 @@ export default function Register() {
 
   const paymentMethods = [
     {
-      name: "Multicaixa Express",
-      image: "/express.jpeg",
-    },
-    {
       name: "Transferência Bancária",
       image: "/transf-bank.png",
     },
     {
-      name: "Pagamento Pessoal",
+      name: "Pagamento no Local",
       image: "/pagamento.jpeg",
     },
   ];
 
   return (
     <div className="w-full bg-[url(/efeito-3.png)] bg-cover">
-      <div className="flex flex-col justify-center items-center gap-8 lg:px-8 lg:py-12  bg-gradient-to-r from-secondary/80 to-white/80">
+      <ToastContainer />
+
+      <div className="flex flex-col justify-center items-center gap-4 lg:px-8 lg:py-12  bg-gradient-to-r from-secondary/80 to-white/80">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white/70 shadow-md shadow-gray-400/70 text-primary p-8 flex flex-col items-center w-3/4 max-lg:w-full lg:rounded-lg gap-6">
+          className="bg-white/70 shadow-md shadow-gray-400/70 text-primary p-8 flex flex-col items-center w-8/12 max-lg:w-full lg:rounded-lg gap-6">
           <div className="flex flex-col text-center max-w-lg">
             <h1 className="font-bold text-xl">FORMULÁRIO DE INSCRIÇÃO</h1>
             <p className="text-sm italic">Preencha os campos abaixo.</p>
           </div>
 
-          <div className="flex gap-8 w-full max-lg:flex-col">
+          <div className="flex gap-4 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="Primeiro nome"
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none placeholder:italic bg-white/25 placeholder:text-gray-500 placeholder:text-xs"
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none placeholder:italic bg-white/25 placeholder:text-gray-500 placeholder:text-xs"
                 {...register("firstname", {
                   required: "Nome completo é obrigatório",
                 })}
@@ -99,7 +159,7 @@ export default function Register() {
               {errors.firstname && (
                 <p
                   role="alert"
-                  className="text-red-500 text-sm">
+                  className="text-red-500 text-xs">
                   {errors.firstname.message}
                 </p>
               )}
@@ -109,7 +169,7 @@ export default function Register() {
               <input
                 type="text"
                 placeholder="Sobrenome"
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none placeholder:italic bg-white/25 placeholder:text-gray-500 placeholder:text-xs"
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none placeholder:italic bg-white/25 placeholder:text-gray-500 placeholder:text-xs"
                 {...register("lastname", {
                   required: "Sobrenome é obrigatório",
                 })}
@@ -117,23 +177,23 @@ export default function Register() {
               {errors.lastname && (
                 <p
                   role="alert"
-                  className="text-red-500 text-sm">
+                  className="text-red-500 text-xs">
                   {errors.lastname.message}
                 </p>
               )}
             </div>
           </div>
 
-          <div className="flex gap-8 w-full max-lg:flex-col">
+          <div className="flex gap-4 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="NIF"
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("nif", { required: "NIF é obrigatório" })}
               />
               {errors.nif && (
-                <p className="text-red-500 text-sm">{errors.nif.message}</p>
+                <p className="text-red-500 text-xs">{errors.nif.message}</p>
               )}
             </div>
 
@@ -141,13 +201,13 @@ export default function Register() {
               <input
                 type="tel"
                 placeholder="Contacto telefónico"
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("phoneNumber", {
                   required: "Contacto telefónico é obrigatório",
                 })}
               />
               {errors.phoneNumber && (
-                <p className="text-red-500 text-sm">
+                <p className="text-red-500 text-xs">
                   {errors.phoneNumber.message}
                 </p>
               )}
@@ -158,26 +218,26 @@ export default function Register() {
             <input
               type="email"
               placeholder="Email"
-              className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
+              className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
               {...register("email", { required: "Email é obrigatório" })}
             />
             {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
+              <p className="text-red-500 text-xs">{errors.email.message}</p>
             )}
           </div>
 
-          <div className="flex gap-8 w-full max-lg:flex-col">
+          <div className="flex gap-4 w-full max-lg:flex-col">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="Empresa"
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("enterprise", {
                   required: "Empresa é obrigatória",
                 })}
               />
               {errors.enterprise && (
-                <p className="text-red-500 text-sm">
+                <p className="text-red-500 text-xs">
                   {errors.enterprise.message}
                 </p>
               )}
@@ -187,13 +247,13 @@ export default function Register() {
               <input
                 type="text"
                 placeholder="Cargo"
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 outline-none bg-white/25 placeholder:text-gray-500 placeholder:text-xs placeholder:italic"
                 {...register("jobPosition", {
                   required: "Cargo é obrigatório",
                 })}
               />
               {errors.jobPosition && (
-                <p className="text-red-500 text-sm">
+                <p className="text-red-500 text-xs">
                   {errors.jobPosition.message}
                 </p>
               )}
@@ -204,10 +264,9 @@ export default function Register() {
             <div className="w-full py-2 rounded-md bg-white/25">
               <select
                 {...register("country", { required: "País é obrigatório" })}
-                className="w-full py-2 border-b-2 border-gold-one focus:border-b-4 bg-white/25 placeholder:text-gray-500 text-xs outline-none cursor-pointer">
+                className="w-full py-2 border-b-2 border-primary transition-all duration-150 focus:border-b-3 bg-white/25 placeholder:text-gray-500 text-xs outline-none cursor-pointer">
                 <option
                   disabled
-                  selected
                   className="text-black"
                   value="">
                   Selecione o país
@@ -215,7 +274,6 @@ export default function Register() {
                 {options.map((option: { value: string; label: string }) => (
                   <option
                     key={option.value}
-                    value={option.label}
                     className="text-gray-700">
                     {option.label}
                   </option>
@@ -224,7 +282,7 @@ export default function Register() {
             </div>
 
             {errors.country && (
-              <p className="text-red-500 text-sm">{errors.country.message}</p>
+              <p className="text-red-500 text-xs">{errors.country.message}</p>
             )}
           </div>
 
@@ -238,13 +296,13 @@ export default function Register() {
               {packages.map((pack, index) => (
                 <label
                   key={index}
-                  className="flex flex-col hover:bg-gold-one/70 cursor-pointer hover:shadow-md transition-all duration-300 hover:-translate-y-1 items-start p-4 rounded-md  gap-2 w-52 bg-secondary">
+                  className="flex flex-col hover:bg-gold-one/70 cursor-pointer hover:shadow-md transition-all duration-300 hover:-translate-y-1 items-start p-4 rounded-md  gap-2 w-52 max-lg:w-full max-lg:max-w-xs bg-secondary">
                   <input
                     type="radio"
                     {...register("pack", {
                       required: "Pacote é obrigatório",
                     })}
-                    value={pack.name}
+                    value={pack.price}
                   />
 
                   <div className="flex flex-col gap-2">
@@ -259,7 +317,7 @@ export default function Register() {
             </div>
 
             {errors.pack && (
-              <p className="text-red-500 text-sm">{errors.pack.message}</p>
+              <p className="text-red-500 text-xs">{errors.pack.message}</p>
             )}
           </div>
 
@@ -270,30 +328,37 @@ export default function Register() {
             </h1>
 
             <div className="flex flex-wrap items-center gap-4 w-full">
-              {
-                paymentMethods.map((method, index) => (
-                  <label
-                    key={index}
-                    className="flex items-center w-fit gap-2 shadow bg-white rounded-md p-4 hover:bg-secondary/70 cursor-pointer hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                    <input type="radio" 
-                      {...register("paymentMethod", {
-                        required: "Método de pagamento é obrigatório",
-                      })}
-                    />
-                    <span className="text-sm">{method.name}</span>
+              {paymentMethods.map((method, index) => (
+                <label
+                  key={index}
+                  className="flex items-center w-fit gap-2 shadow bg-white rounded-md p-4 hover:bg-secondary/70 cursor-pointer hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                  <input
+                    type="radio"
+                    value={method.name}
+                    {...register("paymentMethod", {
+                      required: "Método de pagamento é obrigatório",
+                    })}
+                  />
+                  <span className="text-sm">{method.name}</span>
 
-                    <Image
-                      src={method.image}
-                      alt="check"
-                      width={200}
-                      height={200}
-                      className="w-10 h-10 rounded-md object-cover"
-                    />
-                  </label>
-                ))
-              }
+                  <Image
+                    src={method.image}
+                    alt="check"
+                    width={200}
+                    height={200}
+                    className="w-10 h-10 rounded-md object-cover"
+                  />
+                </label>
+              ))}
             </div>
 
+            {errors.paymentMethod && (
+              <p className="text-red-500 text-xs">
+                {errors.paymentMethod.message}
+              </p>
+            )}
+          </div>
+          <div className="w-full flex flex-col gap-2">
             <label className="w-full flex items-center mt-4">
               <input
                 type="checkbox"
@@ -303,13 +368,18 @@ export default function Register() {
                 })}
               />
               <span className="text-xs ml-2">
-                Aceitar os Termos e condições da Global Services Corporation.
+                Aceitar os Termos e Condições da Global Services Corporation.
               </span>
             </label>
+
+            {errors.terms && (
+              <p className="text-red-500 text-xs">{errors.terms.message}</p>
+            )}
           </div>
 
           <button
             type="submit"
+            disabled={isLoading}
             className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-primary cursor-pointer font-semibold">
             {isLoading ? (
               <span className="animate-pulse">Enviando...</span>
