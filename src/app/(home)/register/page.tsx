@@ -32,6 +32,41 @@ export default function Register() {
 
   const options = useMemo(() => countryList().getData(), []);
 
+  const sendToDatabase = async (data: InputFields) => {
+    try {
+      const response = await fetch(
+        "https://gsc-website-api.onrender.com/adesion",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            firstname: data.firstname,
+            lastname: data.lastname,
+            jobPosition: data.jobPosition,
+            nif: data.nif,
+            enterprise: data.enterprise,
+            email: data.email,
+            phoneNumber: data.phoneNumber,
+            country: data.country,
+            package: data.pack,
+            paymentMethod: data.paymentMethod,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
+
+      if (!response.ok) {
+        console.error("Falha ao para base de dados, tente novamente.");
+      } else {
+        console.log("Enviado com sucesso para a base de dados.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
   const enviarticket = async (data: InputFields) => {
     try {
       const response = await fetch("/api/send-ticket", {
@@ -50,12 +85,10 @@ export default function Register() {
         console.error("Falha ao enviar o ticket, tente novamente.");
       } else {
         console.log("Ticket enviado com sucesso.");
-        setLoading(false);
       }
     } catch (error) {
       console.error("Error sending ticket:", error);
     } finally {
-      setLoading(false);
     }
   };
 
@@ -91,13 +124,14 @@ export default function Register() {
       } else {
         toast.success("Email enviado com sucesso.");
         enviarticket(data);
-        setLoading(false);
+        sendToDatabase(data);
+        reset();
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error("Error sending email:", error);
     } finally {
-      reset();
+      setLoading(false);
     }
   };
 

@@ -25,6 +25,8 @@ export default function ContactUs({
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit: SubmitHandler<InputFields> = (data) => {
+    setIsLoading(true);
+
     const { name, email, contact, subject } = data;
     const response = fetch(
       "https://gsc-website-api.onrender.com/contact-email",
@@ -44,7 +46,6 @@ export default function ContactUs({
 
     response
       .then((res) => {
-        setIsLoading(true);
         if (res.ok) {
           toast.success("Mensagem enviada com sucesso!");
           setIsLoading(false);
@@ -175,6 +176,7 @@ export default function ContactUs({
 
             <button
               type="submit"
+              disabled={isLoading}
               className="px-4 py-2 w-full rounded-md bg-primary text-white hover:bg-transparent hover:text-primary duration-300 transition-colors border border-secondary-blue cursor-pointer">
               {isLoading ? (
                 <span className="animate-pulse">Enviando...</span>

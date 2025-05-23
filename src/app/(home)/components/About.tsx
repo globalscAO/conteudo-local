@@ -21,7 +21,7 @@ export default function About({
           />
 
           <div className="flex flex-col gap-2 max-lg:gap-4 w-1/2 max-lg:w-full max-lg:items-center">
-            <span className="main-title">Sobre o evento</span>
+            <h2 className="main-title">Sobre o evento</h2>
             <p className="text-primary max-lg:text-justify">
               O Fórum sobre{" "}
               <span className="font-bold">
@@ -31,21 +31,22 @@ export default function About({
               Edição da Mesa Redonda com CEOs. O encontro reuniu alguns dos
               principais intervenientes da banca e do conteúdo local angolano,
               tendo como tema:{" "}
-              <p className="font-bold">
-                Como a Tecnologia pode Promover a Integração da Cadeia de Valor
-                do Mercado Financeiro e da Indústria de Petróleo e Gás?
-              </p>
-              <p>
-                O Fórum sobre o Impacto do Sector Financeiro no Conteúdo Local,
-                será uma oportunidade para discutir, fomentar e dinamizar boas
-                práticas entre o sector financeiro e as empresas do conteúdo
-                local angolano.
-              </p>
-              <p>
-                No dia <span className="font-bold"> 17 de Julho de 2025</span>,
-                no <span className="font-bold">Hotel Epic Sana</span>, em Luanda, estaremos esperando
-                por si para um dia de partilha de experiências e boas práticas.
-              </p>
+            </p>
+            <p className="font-bold">
+              Como a Tecnologia pode Promover a Integração da Cadeia de Valor do
+              Mercado Financeiro e da Indústria de Petróleo e Gás?
+            </p>
+            <p>
+              O Fórum sobre o Impacto do Sector Financeiro no Conteúdo Local,
+              será uma oportunidade para discutir, fomentar e dinamizar boas
+              práticas entre o sector financeiro e as empresas do conteúdo local
+              angolano.
+            </p>
+            <p>
+              No dia <span className="font-bold"> 17 de Julho de 2025</span>, no{" "}
+              <span className="font-bold">Hotel Epic Sana</span>, em Luanda,
+              estaremos esperando por si para um dia de partilha de experiências
+              e boas práticas.
             </p>
           </div>
         </div>
