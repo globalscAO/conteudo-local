@@ -37,7 +37,7 @@ export default function Register() {
       const response = await fetch("/api/send-ticket", {
         method: "POST",
         body: JSON.stringify({
-          email: "joelpitra44@gmail.com",
+          email: "comercial@globalsc.ao",
           phoneNumber: "+244941064919",
           header_1: `${data.firstname} ${data.lastname}`,
           value_1: `${data.enterprise}`,
