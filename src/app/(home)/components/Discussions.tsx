@@ -39,9 +39,11 @@ export default function Discussions({
                 key={index}
                 className="flex gap-4 items-center flex-col-reverse w-full max-w-72">
                 <div className="flex items-start justify-start gap-2">
-                {/*   <span className="text-2xl font-bold text-gold-one max-lg:hidden">
-                    »
-                  </span> */}
+                  {/*   
+                    <span className="text-2xl font-bold text-gold-one max-lg:hidden">
+                      »
+                    </span> 
+                  */}
 
                   <p className="font-semibold max-lg:text-justify">
                     {item.description}
