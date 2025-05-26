@@ -37,7 +37,7 @@ export default function Discussions({
             {subjects.map((item, index) => (
               <li
                 key={index}
-                className="flex gap-8 max-lg:gap-4 items-center flex-col-reverse w-full max-w-72">
+                className="flex gap-4 items-center flex-col-reverse w-full max-w-72">
                 <div className="flex items-start justify-start gap-2">
                 {/*   <span className="text-2xl font-bold text-gold-one max-lg:hidden">
                     »
@@ -53,7 +53,7 @@ export default function Discussions({
                   alt={"Discussion"}
                   width={250}
                   height={150}
-                  className="object-cover rounded-md max-w-h-37.5 h-full w-full bg-white"
+                  className="object-cover rounded-md max-h-40 h-full w-full bg-white"
                 />
               </li>
             ))}
