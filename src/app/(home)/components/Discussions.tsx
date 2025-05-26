@@ -33,15 +33,15 @@ export default function Discussions({
             <h1 className="main-title">Principais pontos de discussão</h1>
           </div>
 
-          <ul className="decoration-dashed text-left w-full flex flex-col gap-12">
+          <ul className="decoration-dashed text-left w-full flex flex-wrap justify-center items-center gap-12">
             {subjects.map((item, index) => (
               <li
                 key={index}
-                className="flex gap-8 max-lg:gap-4 items-center max-lg:flex-col-reverse justify-start w-full">
+                className="flex gap-8 max-lg:gap-4 items-center flex-col-reverse w-full max-w-72">
                 <div className="flex items-start justify-start gap-2">
-                  <span className="text-2xl font-bold text-gold-one max-lg:hidden">
+                {/*   <span className="text-2xl font-bold text-gold-one max-lg:hidden">
                     »
-                  </span>
+                  </span> */}
 
                   <p className="font-semibold max-lg:text-justify">
                     {item.description}
@@ -53,7 +53,7 @@ export default function Discussions({
                   alt={"Discussion"}
                   width={250}
                   height={150}
-                  className="object-cover rounded-md max-w-62.5 max-w-h-37.5 h-full w-full bg-white"
+                  className="object-cover rounded-md max-w-h-37.5 h-full w-full bg-white"
                 />
               </li>
             ))}

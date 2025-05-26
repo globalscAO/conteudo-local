@@ -7,14 +7,25 @@ export default function SpecialGuests({
 }) {
   const guests = [
     {
-      name: "NJ AYUK",
-      image: "/guests/nj_ayuk.png",
-      title: "Presidente da Câmara Africana de Energia",
+      name: "Milton Reis",
+      image: "/guests/milton_reis.png",
+      title:
+        "Secretário do Presidente da República de Angola para os Assuntos Económicos",
     },
     {
       name: "Pedro Siza Vieira",
       image: "/guests/pedro_vieira.jpg",
       title: "Ex. Ministro da Economia de Portugal",
+    },
+    {
+      name: "NJ AYUK",
+      image: "/guests/nj_ayuk.png",
+      title: "Presidente da Câmara Africana de Energia",
+    },
+    {
+      name: "Paulino Jerónimo",
+      image: "/guests/paulino_jeronimo.jpg",
+      title: "Presidente do Conselho de Administração ANPG",
     },
   ];
 
@@ -27,7 +38,7 @@ export default function SpecialGuests({
         <div className="flex max-w-5xl w-full flex-col gap-8 items-center justify-center text-center">
           <h1 className="main-title">Convidados especiais</h1>
 
-          <ul className="flex flex-wrap gap-20 justify-center items-start">
+          <ul className="flex flex-wrap gap-12 justify-center items-start">
             {guests.map((item, index) => (
               <li key={index}>
                 <div className="max-w-78 flex flex-col gap-4 text-primary">

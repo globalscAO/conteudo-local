@@ -122,7 +122,7 @@ export default function Register() {
         toast.error("Falha ao enviar o email, tente novamente.");
         setLoading(false);
       } else {
-        toast.success("Email enviado com sucesso.");
+        toast.success("Email enviado com sucesso, verifique a sua caixa de e-mail.");
         enviarticket(data);
         sendToDatabase(data);
         reset();
