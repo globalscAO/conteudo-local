@@ -71,7 +71,7 @@ export default function Guests({
                       alt={item.name}
                       width={300}
                       height={300}
-                      className="h-full w-full rounded-full object-cover object-top"
+                      className="h-full w-full bg-white rounded-full object-cover object-top"
                     />
                   </div>
 
