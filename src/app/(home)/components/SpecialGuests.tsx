@@ -8,7 +8,7 @@ export default function SpecialGuests({
   const guests = [
     {
       name: "Milton Reis",
-      image: "/guests/milton_reis.png",
+      image: "",
       title:
         "Secretário do Presidente da República de Angola para os Assuntos Económicos",
     },
@@ -43,13 +43,23 @@ export default function SpecialGuests({
               <li key={index}>
                 <div className="max-w-78 flex flex-col gap-4 text-primary">
                   <div className="gold p-2 rounded-full">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={300}
-                      height={300}
-                      className="w-78 h-76 rounded-full object-cover object-top"
-                    />
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={300}
+                        height={300}
+                        className="w-78 h-76 rounded-full object-cover object-top"
+                      />
+                    ) : (
+                      <Image
+                        src={"/guests/unknown.png"}
+                        alt={item.name}
+                        width={300}
+                        height={300}
+                        className="w-78 h-76 rounded-full object-cover object-top"
+                      />
+                    )}
                   </div>
 
                   <div className="flex flex-col text-lg">
