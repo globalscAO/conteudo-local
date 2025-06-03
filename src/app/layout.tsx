@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const poppins = Poppins({
   weight: "300",
@@ -38,6 +39,19 @@ export default function RootLayout({
     <html lang="pt-PT">
       <Analytics />
       <body className={`${poppins} antialiased`}>{children}</body>
+      {/* Google Tag Manager */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-942628907"></Script>
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-942628907');`}
+      </Script>
     </html>
   );
 }
