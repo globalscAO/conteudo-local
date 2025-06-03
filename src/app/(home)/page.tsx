@@ -6,7 +6,6 @@ export const metadata: Metadata = {
     "Página Inicial - Fórum: O IMPACTO DO SECTOR FINANCEIRO NO CONTEÚDO LOCAL",
   description: `Participe do Fórum sobre o impacto do setor financeiro no conteúdo local, uma extensão do debate realizado durante a 5ª Plenária da 4ª Edição da Mesa Redonda com CEOs. Descubra insights valiosos sobre o futuro do setor financeiro e sua relação com os negócios locais.`,
   keywords: [
-    // Palavras-chave principais
     "fórum setor financeiro",
     "conteúdo local",
     "mesa redonda CEOs",
@@ -28,7 +27,6 @@ export const metadata: Metadata = {
     "iniciativas financeiras Angola",
     "investimento local Angola",
 
-    // SEO local
     "evento em Luanda",
     "conferência em Luanda 2025",
     "eventos corporativos Angola",
@@ -40,7 +38,6 @@ export const metadata: Metadata = {
     "GSC Angola evento",
     "empresas de Angola finanças",
 
-    // Long-tail (cauda longa)
     "como o setor financeiro afeta o conteúdo local",
     "impacto do setor financeiro nos negócios locais",
     "desenvolvimento local com apoio financeiro",
@@ -52,7 +49,6 @@ export const metadata: Metadata = {
     "relação entre CEOs e economia local",
     "setor bancário e conteúdo local",
 
-    // Institucional / educacional
     "finanças sustentáveis Angola",
     "educação financeira em Angola",
     "CEOs e inovação local",
@@ -63,7 +59,6 @@ export const metadata: Metadata = {
     "estratégias de investimento Angola",
     "melhoria do conteúdo local com apoio financeiro",
 
-    // Variantes úteis
     "plataforma de debate Angola",
     "evento sobre economia local",
     "eventos sobre finanças em Luanda",
