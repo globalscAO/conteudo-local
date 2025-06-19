@@ -18,6 +18,12 @@ export default function SpecialGuests({
         "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
     },
     {
+      name: "Armando Manuel",
+      image: "/guests/armando_manuel.png",
+      title:
+        "Presidente do Conselho de Administração do Fundo Soberano de Angola",
+    },
+    {
       name: "Pedro Siza Vieira",
       image: "/guests/pedro_vieira.jpg",
       title: "Ex. Ministro da Economia de Portugal",
