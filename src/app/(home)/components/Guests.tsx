@@ -13,7 +13,7 @@ export default function Guests({
     },
     {
       name: "Dra. Suzana Monteiro Camacho",
-      imgUrl: "/guests/suzana_camacho.jpeg",
+      imgUrl: "/guests/suzana_camacho.png",
       title: "Advisor, Central Bank Board - BNA",
     },
     {
@@ -43,7 +43,7 @@ export default function Guests({
     },
     {
       name: "Luís Gonçalves",
-      imgUrl: "/guests/luis_goncalves.jpeg",
+      imgUrl: "/guests/luis_goncalves.png",
       title: "CEO do BFA - Banco de Fomento Angola",
     },
     {

@@ -7,10 +7,15 @@ export default function SpecialGuests({
 }) {
   const guests = [
     {
-      name: "Milton Reis",
-      image: "",
+      name: "Rui Miguêns de Oliveira",
+      image: "/guests/rui_miguens.png",
+      title: "Ministro da Indústria e Comércio de Angola",
+    },
+    {
+      name: "Jerônimo Paulino",
+      image: "/guests/paulino_jeronimo.jpg",
       title:
-        "Secretário do Presidente da República de Angola para os Assuntos Económicos",
+        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
     },
     {
       name: "Pedro Siza Vieira",
@@ -21,11 +26,6 @@ export default function SpecialGuests({
       name: "NJ AYUK",
       image: "/guests/nj_ayuk.png",
       title: "Presidente da Câmara Africana de Energia",
-    },
-    {
-      name: "Paulino Jerónimo",
-      image: "/guests/paulino_jeronimo.jpg",
-      title: "Presidente do Conselho de Administração ANPG",
     },
   ];
 
