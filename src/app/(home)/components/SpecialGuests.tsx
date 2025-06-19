@@ -12,16 +12,16 @@ export default function SpecialGuests({
       title: "Ministro da Indústria e Comércio de Angola",
     },
     {
-      name: "Jerônimo Paulino",
-      image: "/guests/paulino_jeronimo.jpg",
-      title:
-        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
-    },
-    {
       name: "Armando Manuel",
       image: "/guests/armando_manuel.png",
       title:
         "Presidente do Conselho de Administração do Fundo Soberano de Angola",
+    },
+    {
+      name: "Jerônimo Paulino",
+      image: "/guests/paulino_jeronimo.jpg",
+      title:
+        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
     },
     {
       name: "Pedro Siza Vieira",
