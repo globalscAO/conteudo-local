@@ -49,7 +49,7 @@ export default function SpecialGuests({
                         alt={item.name}
                         width={300}
                         height={300}
-                        className="w-78 h-76 rounded-full object-cover object-top"
+                        className="w-78 h-76 bg-white rounded-full object-cover object-top"
                       />
                     ) : (
                       <Image
