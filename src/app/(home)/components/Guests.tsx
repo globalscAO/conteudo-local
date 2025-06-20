@@ -6,7 +6,7 @@ export default function Guests({
   externalRef?: (el: HTMLDivElement) => void;
 }) {
   const guests = [
-    {
+    /*   {
       name: "Mário Nascimento",
       imgUrl: "/guests/mario_nascimento.jpeg",
       title: "Presidente da ABANC",
@@ -20,13 +20,18 @@ export default function Guests({
       name: "Luís Teles",
       imgUrl: "/guests/luis_teles.jpeg",
       title: "CEO do Standard Bank",
-    },
+    }, */
     {
       name: "Osvaldo Macaia",
       imgUrl: "/guests/osvaldo_lemos.jpeg",
       title: "CEO do Banco Sol",
     },
     {
+      name: "Matuzalém Sukete",
+      imgUrl: "/guests/matuzalem_sukete.png",
+      title: "Diretor Geral na AES",
+    },
+    /*   {
       name: "Hugo Teles",
       imgUrl: "/guests/hugo_teles.jpeg",
       title: "PCE do Banco BIC Angola",
@@ -40,17 +45,22 @@ export default function Guests({
       name: "Alberto Jorge Mendes",
       imgUrl: "/guests/alberto_mendes.jpeg",
       title: "PCA do Grupo Simples",
-    },
+    }, */
     {
       name: "Luís Gonçalves",
       imgUrl: "/guests/luis_goncalves.png",
       title: "CEO do BFA - Banco de Fomento Angola",
     },
     {
+      name: "Edilson Bartolomeu",
+      imgUrl: "/guests/edilson_bartolomeu.png",
+      title: "CEO na ACREP E&P Angolan Company",
+    },
+    /*  {
       name: "Filipa Vilhena",
       imgUrl: "/guests/filipa_vilhena.jpeg",
       title: "Vice-Presidente da AECIPA",
-    },
+    }, */
   ];
 
   return (
@@ -58,10 +68,10 @@ export default function Guests({
       ref={externalRef}
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="bg-gradient-to-t from-gray-300/70 to-white/90 flex justify-center items-center px-12 py-24 max-lg:py-8">
-        <div className="max-w-5xl w-full flex flex-col gap-5 text-center justify-center items-center">
-          <h1 className="main-title">Destaque das ilustres figuras</h1>
+        <div className="max-w-6xl w-full flex flex-col gap-5 text-center justify-center items-center">
+          <h1 className="main-title">Presenças confirmadas</h1>
 
-          <ul className="flex flex-wrap gap-8 justify-center">
+          <ul className="flex flex-wrap gap-8 justify-center w-full">
             {guests.map((item, index) => (
               <li key={index}>
                 <div className="w-60 flex flex-col items-center justify-center gap-4">

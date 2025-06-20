@@ -41,10 +41,10 @@ export default function SpecialGuests({
       id="convidados"
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="px-12 py-24 max-lg:py-8 flex items-center justify-center bg-secondary/80">
-        <div className="flex max-w-5xl w-full flex-col gap-8 items-center justify-center text-center">
+        <div className="flex max-w-6xl w-full flex-col gap-8 items-center justify-center text-center">
           <h1 className="main-title">Convidados especiais</h1>
 
-          <ul className="flex flex-wrap gap-12 justify-center items-start">
+          <ul className="flex flex-wrap gap-12 justify-center items-start w-full">
             {guests.map((item, index) => (
               <li key={index}>
                 <div className="max-w-78 flex flex-col gap-4 text-primary">
