@@ -5,20 +5,26 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-export default function Partners({
+export default function InstitutionalSupport({
   externalRef,
 }: {
   externalRef?: (el: HTMLDivElement) => void;
 }) {
-  const partners = ["/partners/1.png", "/partners/2.png", "/partners/3.png", "/partners/4.png", "/partners/5.png", "/partners/6.png", "/partners/7.png", "/partners/8.png", "/partners/9.png"];
-  
+  const partners = [
+    "/institutional/governo-de-angola.png",
+    "/institutional/mirempet.png",
+    "/institutional/anpg.jpg",
+  ];
+
   return (
     <div
       ref={externalRef}
       id="parceiros"
       className="w-full bg-primary text-white flex justify-center items-center px-12 py-12 max-lg:py-8">
       <div className="max-w-5xl w-full flex flex-col items-center justify-center gap-8">
-        <h1 className="font-bold text-4xl max-lg:text-xl">Parceiros</h1>
+        <h1 className="font-bold text-4xl max-lg:text-xl">
+          Apoio Institucional
+        </h1>
 
         <Swiper
           loop
@@ -29,7 +35,7 @@ export default function Partners({
               slidesPerView: 1,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           modules={[Autoplay]}
