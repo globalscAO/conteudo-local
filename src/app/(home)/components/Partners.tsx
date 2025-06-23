@@ -10,7 +10,7 @@ export default function Partners({
 }: {
   externalRef?: (el: HTMLDivElement) => void;
 }) {
-  const partners = ["/partners/1.png", "/partners/2.png", "/partners/3.png", "/partners/4.png", "/partners/5.png", "/partners/6.png", "/partners/7.png", "/partners/8.png", "/partners/9.png"];
+  const partners = ["/partners/3.png", "/partners/4.png", "/partners/5.png", "/partners/6.png", "/partners/7.png", "/partners/8.png", "/partners/9.png"];
   
   return (
     <div
