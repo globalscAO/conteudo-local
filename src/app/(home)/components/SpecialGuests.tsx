@@ -12,16 +12,9 @@ export default function SpecialGuests({
       title: "Ministro da Indústria e Comércio de Angola",
     },
     {
-      name: "Armando Manuel",
-      image: "/guests/armando_manuel.png",
-      title:
-        "Presidente do Conselho de Administração do Fundo Soberano de Angola",
-    },
-    {
-      name: "Jerônimo Paulino",
-      image: "/guests/paulino_jeronimo.jpg",
-      title:
-        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
+      name: "Luís Gonçalves",
+      image: "/guests/luis_goncalves.png",
+      title: "CEO do BFA - Banco de Fomento Angola",
     },
     {
       name: "Pedro Siza Vieira",
@@ -29,10 +22,42 @@ export default function SpecialGuests({
       title: "Ex. Ministro da Economia de Portugal",
     },
     {
+      name: "Armando Manuel",
+      image: "/guests/armando_manuel.png",
+      title:
+        "Presidente do Conselho de Administração do Fundo Soberano de Angola",
+    },
+    {
       name: "NJ AYUK",
       image: "/guests/nj_ayuk.png",
       title: "Presidente da Câmara Africana de Energia",
     },
+    {
+      name: "Matuzalém Sukete",
+      image: "/guests/matuzalem_sukete.png",
+      title: "Diretor Geral na AES",
+    },
+    {
+      name: "Osvaldo Macaia",
+      image: "/guests/osvaldo_lemos.jpeg",
+      title: "CEO do Banco Sol",
+    },
+    {
+      name: "Anabela Marcos",
+      image: "/guests/anabela_marcos.png",
+      title: "Managing Director da SONILS",
+    },
+    {
+      name: "Edilson Bartolomeu",
+      image: "/guests/edilson_bartolomeu.png",
+      title: "CEO na ACREP E&P Angolan Company",
+    },
+    /* {
+      name: "Jerônimo Paulino",
+      image: "/guests/paulino_jeronimo.jpg",
+      title:
+        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
+    }, */
   ];
 
   return (

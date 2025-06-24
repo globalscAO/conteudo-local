@@ -21,16 +21,16 @@ export default function Guests({
       imgUrl: "/guests/luis_teles.jpeg",
       title: "CEO do Standard Bank",
     }, */
-    {
+    /* {
       name: "Osvaldo Macaia",
       imgUrl: "/guests/osvaldo_lemos.jpeg",
       title: "CEO do Banco Sol",
-    },
+    },*/
     {
       name: "Matuzalém Sukete",
       imgUrl: "/guests/matuzalem_sukete.png",
       title: "Diretor Geral na AES",
-    },
+    }, 
     /*   {
       name: "Hugo Teles",
       imgUrl: "/guests/hugo_teles.jpeg",
@@ -46,7 +46,7 @@ export default function Guests({
       imgUrl: "/guests/alberto_mendes.jpeg",
       title: "PCA do Grupo Simples",
     }, */
-    {
+   /*  {
       name: "Luís Gonçalves",
       imgUrl: "/guests/luis_goncalves.png",
       title: "CEO do BFA - Banco de Fomento Angola",
@@ -55,7 +55,7 @@ export default function Guests({
       name: "Edilson Bartolomeu",
       imgUrl: "/guests/edilson_bartolomeu.png",
       title: "CEO na ACREP E&P Angolan Company",
-    },
+    }, */
     /*  {
       name: "Filipa Vilhena",
       imgUrl: "/guests/filipa_vilhena.jpeg",
