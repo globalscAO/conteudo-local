@@ -42,11 +42,11 @@ export default function SpecialGuests({
       image: "/guests/osvaldo_lemos.jpeg",
       title: "CEO do Banco Sol",
     },
-    {
+/*     {
       name: "Anabela Marcos",
       image: "/guests/anabela_marcos.png",
       title: "Managing Director da SONILS",
-    },
+    }, */
     {
       name: "Edilson Bartolomeu",
       image: "/guests/edilson_bartolomeu.png",
