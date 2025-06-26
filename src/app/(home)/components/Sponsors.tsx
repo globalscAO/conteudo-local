@@ -11,12 +11,14 @@ export default function Sponsors({
   externalRef?: (el: HTMLDivElement) => void;
 }) {
   const sponsors = [
+    "/sponsors/1.png",
     "/sponsors/2.png",
     "/sponsors/3.png",
     "/sponsors/1.png",
     "/sponsors/4.png",
     "/sponsors/5.png",
     "/sponsors/6.png",
+    "/sponsors/7.png",
   ];
 
   return (
