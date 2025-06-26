@@ -12,6 +12,12 @@ export default function SpecialGuests({
       title: "Ministro da Indústria e Comércio de Angola",
     },
     {
+      name: "Jerônimo Paulino",
+      image: "/guests/paulino_jeronimo.jpg",
+      title:
+        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
+    },
+    {
       name: "Luís Gonçalves",
       image: "/guests/luis_goncalves.png",
       title: "CEO do BFA - Banco de Fomento Angola",
@@ -42,7 +48,7 @@ export default function SpecialGuests({
       image: "/guests/osvaldo_lemos.jpeg",
       title: "CEO do Banco Sol",
     },
-/*     {
+    /*     {
       name: "Anabela Marcos",
       image: "/guests/anabela_marcos.png",
       title: "Managing Director da SONILS",
@@ -52,12 +58,6 @@ export default function SpecialGuests({
       image: "/guests/edilson_bartolomeu.png",
       title: "CEO na ACREP E&P Angolan Company",
     },
-    /* {
-      name: "Jerônimo Paulino",
-      image: "/guests/paulino_jeronimo.jpg",
-      title:
-        "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
-    }, */
   ];
 
   return (
