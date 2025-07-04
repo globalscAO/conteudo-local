@@ -18,7 +18,7 @@ export default function Discussions({
       description: `Como o investimento em formação e educação profissional pode contribuir para o cumprimento das exigências do conteúdo local e para o fortalecimento das indústrias em Angola.`,
       imgUrl: "/discussions/3.jpg",
     },
-    /*   {
+    /*{
       description: `Como o sector financeiro pode apoiar as empresas do sector de petróleos a implementação do conteúdo local, fornecendo soluções de tesouraria, e assessoria técnica.`,
       imgUrl: "/discussions/4.jpg",
     }, */

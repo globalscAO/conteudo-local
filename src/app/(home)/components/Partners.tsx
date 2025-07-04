@@ -18,6 +18,7 @@ export default function Partners({
     "/partners/7.png",
     "/partners/8.png",
     "/partners/9.png",
+    "/partners/12.png",
   ];
 
   return (

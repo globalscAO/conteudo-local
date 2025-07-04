@@ -19,6 +19,7 @@ export default function Sponsors({
     "/sponsors/6.png",
     "/sponsors/7.png",
     "/sponsors/8.png",
+    "/sponsors/9.png",
   ];
 
   return (
