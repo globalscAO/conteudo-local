@@ -58,6 +58,26 @@ export default function SpecialGuests({
       image: "/guests/edilson_bartolomeu.png",
       title: "CEO na ACREP E&P Angolan Company",
     },
+    {
+      name: "Neide dos Santos",
+      image: "/guests/neide_dos_santos.png",
+      title: "Administradora Executiva - AIPEX",
+    },
+    {
+      name: "Berta Rodrigues Issa",
+      image: "/guests/berta_rodrigues_issa.png",
+      title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
+    },
+    {
+      name: "José Nascimento",
+      image: "",
+      title: "Administrador Executivo do BFA",
+    },
+    {
+      name: "Neil Breslin Jr.",
+      image: "/guests/neil_breslin.png",
+      title: "Director Executivo da Câmera",
+    },
   ];
 
   return (
