@@ -70,7 +70,7 @@ export default function SpecialGuests({
     },
     {
       name: "José Nascimento",
-      image: "",
+      image: "guests/jose_nascimento.png",
       title: "Administrador Executivo do BFA",
     },
     {
