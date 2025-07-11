@@ -18,10 +18,15 @@ export default function SpecialGuests({
         "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
     },
     {
+      name: "José Nascimento",
+      image: "guests/jose_nascimento.png",
+      title: "Administrador Executivo do BFA",
+    },
+   /*  {
       name: "Luís Gonçalves",
       image: "/guests/luis_goncalves.png",
       title: "CEO do BFA - Banco de Fomento Angola",
-    },
+    }, */
     {
       name: "Pedro Siza Vieira",
       image: "/guests/pedro_vieira.jpg",
@@ -67,11 +72,6 @@ export default function SpecialGuests({
       name: "Berta Rodrigues Issa",
       image: "/guests/berta_rodrigues_issa.png",
       title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
-    },
-    {
-      name: "José Nascimento",
-      image: "guests/jose_nascimento.png",
-      title: "Administrador Executivo do BFA",
     },
     {
       name: "Neil Breslin Jr.",
