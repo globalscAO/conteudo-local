@@ -17,12 +17,7 @@ export default function SpecialGuests({
       title:
         "Presidente do Conselho de Administração da ANPG - Agência Nacional de Petróleo, Gás e Biocombustíveis",
     },
-    {
-      name: "José Nascimento",
-      image: "guests/jose_nascimento.png",
-      title: "Administrador Executivo do BFA",
-    },
-   /*  {
+    /*  {
       name: "Luís Gonçalves",
       image: "/guests/luis_goncalves.png",
       title: "CEO do BFA - Banco de Fomento Angola",
@@ -67,6 +62,11 @@ export default function SpecialGuests({
       name: "Neide dos Santos",
       image: "/guests/neide_dos_santos.png",
       title: "Administradora Executiva - AIPEX",
+    },
+    {
+      name: "José Nascimento",
+      image: "guests/jose_nascimento.png",
+      title: "Administrador Executivo do BFA",
     },
     {
       name: "Berta Rodrigues Issa",
