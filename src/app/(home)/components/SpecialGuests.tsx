@@ -44,9 +44,9 @@ export default function SpecialGuests({
       title: "Diretor Geral na AES",
     },
     {
-      name: "Osvaldo Macaia",
-      image: "/guests/osvaldo_lemos.jpeg",
-      title: "CEO do Banco Sol",
+      name: "Vladmir Patrício Castelo Branco da Cunha",
+      image: "/guests/vladimir_patricio.png",
+      title: "Administrador Executivo Banco do Sol",
     },
     /*     {
       name: "Anabela Marcos",
