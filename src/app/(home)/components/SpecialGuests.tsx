@@ -69,7 +69,7 @@ export default function SpecialGuests({
       title: "Administrador Executivo da ARSEG",
     },
     {
-      name: "Eliana M. Santos",
+      name: "Eliana M. Dos Santos",
       image: "/guests/eliana_santos.png",
       title: "Administradora Executiva / CFO UNITEL S.A.",
     },
