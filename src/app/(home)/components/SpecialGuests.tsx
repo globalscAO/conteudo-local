@@ -104,11 +104,7 @@ export default function SpecialGuests({
       image: "/guests/berta_rodrigues_issa.png",
       title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
     },
-    {
-      name: "Neil Breslin Jr.",
-      image: "/guests/neil_breslin.png",
-      title: "Director Executivo da Câmera",
-    },
+  
   ];
 
   return (
