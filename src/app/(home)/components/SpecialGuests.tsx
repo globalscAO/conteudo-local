@@ -48,6 +48,37 @@ export default function SpecialGuests({
       image: "/guests/vladimir_patricio.png",
       title: "Administrador Executivo Banco do Sol",
     },
+    {
+      name: "José Barata",
+      image: "/guests/jose_barata.png",
+      title: "PCA da Deloitte",
+    },
+    {
+      name: "Vasco Januário",
+      image: "/guests/vasco_januario.png",
+      title: "Administrador Executivo da CMC",
+    },
+    {
+      name: "Sandra Rodrigues Lobato",
+      image: "/guests/sandra_lobato.png",
+      title: "Sofia fundadora e CVO da QHSE Solutions, Lda",
+    },
+    {
+      name: "Aldemiro Gonçalves",
+      image: "/guests/vladimir_patricio.png",
+      title: "Administrador Executivo da ARSEG",
+    },
+    {
+      name: "Eliana Santos",
+      image: "/guests/aldemiro_goncalves.png",
+      title: "Administradora Executiva / CFO UNITEL S.A.",
+    },
+    {
+      name: "Nsunda Mpovelo",
+      image: "/guests/nsunda_mpovelo.png",
+      title: "Consultora Deloitte",
+    },
+
     /*     {
       name: "Anabela Marcos",
       image: "/guests/anabela_marcos.png",
