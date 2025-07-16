@@ -74,6 +74,21 @@ export default function SpecialGuests({
       title: "Administradora Executiva / CFO UNITEL S.A.",
     },
     {
+      name: "Neide dos Santos",
+      image: "/guests/neide_dos_santos.png",
+      title: "Administradora Executiva - AIPEX",
+    },
+    {
+      name: "José Nascimento",
+      image: "guests/jose_nascimento.png",
+      title: "Administrador Executivo do BFA",
+    },
+    {
+      name: "Berta Rodrigues Issa",
+      image: "/guests/berta_rodrigues_issa.png",
+      title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
+    },
+    {
       name: "Nsunda Mpovelo",
       image: "/guests/nsunda_mpovelo.png",
       title: "Consultora Deloitte",
@@ -88,21 +103,6 @@ export default function SpecialGuests({
       name: "Edilson Bartolomeu",
       image: "/guests/edilson_bartolomeu.png",
       title: "CEO na ACREP E&P Angolan Company",
-    },
-    {
-      name: "Neide dos Santos",
-      image: "/guests/neide_dos_santos.png",
-      title: "Administradora Executiva - AIPEX",
-    },
-    {
-      name: "José Nascimento",
-      image: "guests/jose_nascimento.png",
-      title: "Administrador Executivo do BFA",
-    },
-    {
-      name: "Berta Rodrigues Issa",
-      image: "/guests/berta_rodrigues_issa.png",
-      title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
     },
   ];
 
