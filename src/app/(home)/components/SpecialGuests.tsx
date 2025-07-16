@@ -65,7 +65,7 @@ export default function SpecialGuests({
     },
     {
       name: "Aldemiro Gonçalves",
-      image: "/guests/aldemiro_gonçalves.png",
+      image: "/guests/aldemiro_goncalves.png",
       title: "Administrador Executivo da ARSEG",
     },
     {
