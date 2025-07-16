@@ -65,7 +65,7 @@ export default function SpecialGuests({
     },
     {
       name: "Aldemiro Gonçalves",
-      image: "/guests/vladimir_patricio.png",
+      image: "/guests/aldemiro_gonçalves.png",
       title: "Administrador Executivo da ARSEG",
     },
     {
@@ -104,7 +104,6 @@ export default function SpecialGuests({
       image: "/guests/berta_rodrigues_issa.png",
       title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
     },
-  
   ];
 
   return (
