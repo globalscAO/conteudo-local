@@ -80,13 +80,18 @@ export default function SpecialGuests({
     },
     {
       name: "José Nascimento",
-      image: "guests/jose_nascimento.png",
+      image: "/guests/jose_nascimento.png",
       title: "Administrador Executivo do BFA",
     },
     {
       name: "Berta Rodrigues Issa",
       image: "/guests/berta_rodrigues_issa.png",
       title: "Presidente da ESSEA. Fundadora e CEO da Inga Rose",
+    },
+    {
+      name: "Diogo Correia",
+      image: "/guests/diogo_correia.png",
+      title: "Associate Partner da Deloitte",
     },
     {
       name: "Nsunda Mpovelo",
