@@ -1,6 +1,6 @@
-import Link from "next/link";
+/* import Link from "next/link";
 import TimerLeft from "./TimerLeft";
-
+ */
 export default function Hero() {
   return (
     <section className="flex w-full items-center justify-center relative h-screen max-lg:h-100">
@@ -15,7 +15,7 @@ export default function Hero() {
         className="pointer-events-none object-cover object-top w-full h-full rounded-lg"
       />
 
-      <div className="absolute top-0 bg-gradient-to-t from-primary/50 to-primary/40  w-full h-full flex justify-center items-center">
+      {/*  <div className="absolute top-0 bg-gradient-to-t from-primary/50 to-primary/40  w-full h-full flex justify-center items-center">
         <div className="max-w-5xl gap-8 h-full items-center justify-center flex flex-col py-24 max-lg:py-8 px-16 max-lg:px-8 text-white">
           <h1 className="font-bold text-center text-4xl max-lg:text-2xl max-w-2xl">
             <span className="font-normal text-sm">FÓRUM SOBRE:</span>
@@ -34,7 +34,7 @@ export default function Hero() {
 
           <TimerLeft />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
