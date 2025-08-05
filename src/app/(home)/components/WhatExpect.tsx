@@ -5,36 +5,57 @@ export default function WhatExpect({
 }: {
   externalRef?: (el: HTMLDivElement) => void;
 }) {
+  const data = [
+    {
+      image: "/6.png",
+      title: "O que esperar",
+      description:
+        "O Fórum sobre o Impacto do Setor Financeiro no Conteúdo Local reunirá líderes do setor financeiro e representantes da indústria de petróleo e gás para discutir como a tecnologia pode promover a integração da cadeia de valor do mercado financeiro e da indústria de petróleo e gás.",
+    },
+    {
+      image: "/7.jpeg",
+      title: "O que esperar",
+      description:
+        "O Fórum sobre o Impacto do Setor Financeiro no Conteúdo Local reunirá líderes do setor financeiro e representantes da indústria de petróleo e gás para discutir como a tecnologia pode promover a integração da cadeia de valor do mercado financeiro e da indústria de petróleo e gás.",
+    },
+    {
+      image: "/6.png",
+      title: "O que esperar",
+      description:
+        "O Fórum sobre o Impacto do Setor Financeiro no Conteúdo Local reunirá líderes do setor financeiro e representantes da indústria de petróleo e gás para discutir como a tecnologia pode promover a integração da cadeia de valor do mercado financeiro e da indústria de petróleo e gás.",
+    },
+  ];
+
   return (
     <section
       ref={externalRef}
-      className="w-full bg-[url(/efeito-3.png)] bg-cover">
-      <div className="flex w-full bg-gradient-to-r from-white to-white/70 justify-center items-center px-12 max-lg:px-8 py-24">
-        <div className="w-full max-w-5xl flex flex-row-reverse gap-12 justify-center max-lg:gap-8 items-center flex-wrap">
-          <Image
-            src={"/cartaz.jpeg"}
-            alt={""}
-            width={500}
-            height={400}
-            className="rounded-lg object-cover w-1/2 max-lg:w-full max-w-md"
-          />
+      className="w-full bg-[url(/efeito-3.png)] bg-cover ">
+      <div className="flex flex-col gap-12 w-full bg-gradient-to-r from-white to-white/70 justify-center items-center px-12 max-lg:px-8 py-24">
+        <h1 className="main-title">Principais Debates do Fórum</h1>
 
-          <div className="flex flex-col gap-2 max-lg:gap-4 w-1/2 max-lg:w-full max-lg:items-center max-lg:text-center">
-            <span className="main-title">O que esperar?</span>
-            <p className="text-primary max-lg:text-justify">
-              Com a publicação do Decreto Presidencial nº 271/20 de 20 de
-              Outubro, foram estabelecidas diretrizes para a implementação do
-              conteúdo local no setor de Petróleo em Angola, tornando este
-              sector num instrumento essencial para a integração do sector
-              empresarial e, consequentemente, acelerar a geração de mais
-              emprego e fomento à diversificação econômica. Este marco
-              regulatório visa não apenas aumentar a participação de empresas e
-              profissionais locais no sector de petróleo e gás, mas também
-              estimular toda a cadeia de valor, particularmente de serviços como
-              a formação e outros serviços essenciais de apoio a atividade
-              petrolífera.
-            </p>
-          </div>
+        <div className="flex justify-between w-full max-w-5xl gap-8">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="max-w-sm w-full flex flex-col items-center justify-center gap-2 bg-gray-200 rounded-2xl">
+              <Image
+                src={item.image}
+                width={300}
+                height={100}
+                alt=""
+                className="w-full rounded-t-lg object-cover object-top h-65"
+              />
+
+              <div className="px-6 pt-2 pb-8 items-center justify-center flex flex-col gap-2">
+                <h2 className="text-primary text-2xl font-bold">
+                  {item.title}
+                </h2>
+                <p className="text-primary max-lg:text-justify text-center">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

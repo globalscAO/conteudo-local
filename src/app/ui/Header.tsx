@@ -62,7 +62,7 @@ export default function Header() {
             <li key={index}>
               <button
                 onClick={item.onClick}
-                className="font-semibold px-8 py-2 cursor-pointer hover:bg-white/10 rounded-md transition-colors duration-300">
+                className="text-xl font-semibold px-8 py-2 cursor-pointer hover:bg-white/10 rounded-md transition-colors duration-300">
                 {item.title}
               </button>
             </li>

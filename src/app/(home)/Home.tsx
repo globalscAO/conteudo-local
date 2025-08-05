@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import About from "./components/About";
-/* import ContactUs from "./components/ContactUs"; */
 import Discussions from "./components/Discussions";
-/* import Guests from "./components/Guests"; */
 import Hero from "./components/Hero";
+/* import ContactUs from "./components/ContactUs"; */
+/* import Guests from "./components/Guests"; */
 /* import HowToParticipate from "./components/HowToParticipate"; */
 import Partners from "./components/Partners";
 import SpecialGuests from "./components/SpecialGuests";
