@@ -48,13 +48,22 @@ export default function Header() {
   return (
     <header className="py-4 px-6 bg-primary w-full flex justify-center items-center">
       <div className="max-w-7xl w-full flex justify-between items-center text-white">
-        <Link href={"/"}>
+        <Link
+          href={"/"}
+          className="flex items-center gap-5">
           <Image
             src={"/logo.png"}
             alt={""}
             width={80}
             height={40}
             className="object-contain max-lg:w-16"
+          />
+          <Image
+            src={"/50-anos-logo.png"}
+            alt={""}
+            width={130}
+            height={80}
+            className=""
           />
         </Link>
         <ul className="flex gap-4 items-center max-lg:hidden">

@@ -2,9 +2,8 @@ import CountUp from "react-countup";
 
 export default function Stats() {
   const datas = [
-    { numbers: 10, title: "Eventos" },
     { numbers: 30, title: "Empresas" },
-    { numbers: 500, title: "Participantes" },
+    { numbers: 200, title: "Participantes" },
     { numbers: 20, title: "Parceiros" },
   ];
 
