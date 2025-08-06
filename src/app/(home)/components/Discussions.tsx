@@ -28,7 +28,7 @@ export default function Discussions({
       ref={externalRef}
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="flex px-12 py-24 max-lg:py-8 items-center justify-center w-full bg-gradient-to-b from-secondary to-white/70">
-        <div className="max-w-5xl w-full flex flex-col gap-8 text-primary text-center items-center">
+        <div className="max-w-7xl w-full flex flex-col gap-8 text-primary text-center items-center">
           <div className="flex flex-col text-center items-center gap-4">
             <h1 className="main-title">Principais pontos de discussão</h1>
           </div>

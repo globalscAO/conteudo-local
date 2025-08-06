@@ -68,7 +68,7 @@ export default function Guests({
       ref={externalRef}
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="bg-gradient-to-t from-gray-300/70 to-white/90 flex justify-center items-center px-12 py-24 max-lg:py-8">
-        <div className="max-w-6xl w-full flex flex-col gap-5 text-center justify-center items-center">
+        <div className="max-w-7xl w-full flex flex-col gap-5 text-center items-center">
           <h1 className="main-title">Presenças confirmadas</h1>
 
           <ul className="flex flex-wrap gap-8 justify-center w-full">

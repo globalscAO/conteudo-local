@@ -42,7 +42,7 @@ export default function HowToParticipate({
       ref={externalRef}
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="w-full flex items-center justify-center px-12 py-24 max-lg:py-8 bg-gradient-to-b from-secondary to-white/70 ">
-        <div className="flex flex-col items-center justify-center gap-12 max-w-5xl">
+        <div className="flex flex-col items-center justify-center gap-12 max-w-7xl">
           <div className="flex flex-col justify-center  gap-2 items-center text-center">
             <h1 className="main-title">Quer saber como pode fazer parte?</h1>
           </div>

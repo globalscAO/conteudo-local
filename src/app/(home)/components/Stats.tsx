@@ -10,12 +10,12 @@ export default function Stats() {
 
   return (
     <div className="flex px-12 py-8 bg-primary justify-center items-center">
-      <div className="flex max-w-5xl w-full justify-between items-center">
+      <div className="flex flex-wrap max-w-6xl w-full justify-between max-lg:justify-center gap-8 items-center">
         {datas.map((stats, index) => (
           <div
             key={index}
-            className="text-white flex items-center justify-center flex-col mx-4">
-            <span className="flex items-center justify-center text-3xl font-bold">
+            className="text-white flex items-center justify-center flex-col">
+            <span className="flex items-center justify-center text-3xl max-lg:text-base font-bold">
               +
               <CountUp
                 end={stats.numbers}
@@ -23,7 +23,7 @@ export default function Stats() {
               />
             </span>
 
-            <p className="text-2xl font-bold">{stats.title}</p>
+            <p className="text-2xl max-lg:text-sm font-bold">{stats.title}</p>
           </div>
         ))}
       </div>

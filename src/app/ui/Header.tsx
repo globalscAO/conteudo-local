@@ -34,9 +34,9 @@ export default function Header() {
       onClick: () => handleScrollToSection("parceiros"),
     },
     {
-      title: "Agenda",
-      id: "Agenda",
-      onClick: () => handleScrollToSection("agenda"),
+      title: "Destaques",
+      id: "main-moments",
+      onClick: () => handleScrollToSection("main-moments"),
     },
     {
       title: "Contactos",
@@ -47,7 +47,7 @@ export default function Header() {
 
   return (
     <header className="py-4 px-6 bg-primary w-full flex justify-center items-center">
-      <div className="max-w-5xl w-full flex justify-between items-center text-white">
+      <div className="max-w-7xl w-full flex justify-between items-center text-white">
         <Link href={"/"}>
           <Image
             src={"/logo.png"}

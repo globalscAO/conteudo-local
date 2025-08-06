@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function About({
   externalRef,
 }: {
@@ -11,16 +9,19 @@ export default function About({
       ref={externalRef}
       className="w-full bg-[url(/efeito-3.png)] bg-cover">
       <div className="flex w-full bg-gradient-to-l from-white to-white/70 justify-center items-center px-12 max-lg:px-8 py-24 max-lg:py-8">
-        <div className="w-full max-w-5xl flex max-lg:gap-8 gap-12 items-center justify-center flex-wrap">
-          <Image
-            src={"/about-us.png"}
-            alt={""}
-            width={500}
-            height={400}
-            className="rounded-lg object-cover w-1/2 max-lg:w-full max-w-md lg:h-100"
+        <div className="w-full max-w-7xl flex max-lg:gap-8 gap-12 items-center justify-center flex-wrap">
+          <video
+            src={
+              "https://global-services-corporation.github.io/images/forum-conteudo-local.mp4"
+            }
+            muted
+            loop
+            playsInline
+            autoPlay={true}
+            className="rounded-lg w-full max-lg:w-full max-w-xl lg:h-100"
           />
 
-          <div className="flex flex-col gap-2 max-lg:gap-4 w-1/2 max-lg:w-full max-lg:items-center">
+          <div className="flex flex-col gap-2 max-lg:gap-4 w-1/2 max-lg:w-full max-w-xl max-lg:items-center">
             <h2 className="main-title">Sobre o evento</h2>
             <p className="text-primary max-lg:text-justify">
               O Fórum sobre{" "}
