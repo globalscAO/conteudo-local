@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import About from "./components/About";
 /* import Discussions from "./components/Discussions"; */
 import Hero from "./components/Hero";
-/* import ContactUs from "./components/ContactUs"; */
+import ContactUs from "./components/ContactUs";
 /* import Guests from "./components/Guests"; */
 /* import HowToParticipate from "./components/HowToParticipate"; */
 import Partners from "./components/Partners";
@@ -58,8 +58,8 @@ export default function Home() {
       {/* <Guests externalRef={(el) => (sectionsRef.current[5] = el)} /> */}
       <Partners externalRef={(el) => (sectionsRef.current[5] = el)} />
       {/*  <Discussions externalRef={(el) => (sectionsRef.current[6] = el)} /> */}
-      {/* <HowToParticipate externalRef={(el) => (sectionsRef.current[7] = el)} />
-      <ContactUs externalRef={(el) => (sectionsRef.current[8] = el)} /> */}
+      {/* <HowToParticipate externalRef={(el) => (sectionsRef.current[7] = el)} /> */}
+      <ContactUs externalRef={(el) => (sectionsRef.current[8] = el)} />
     </div>
   );
 }
