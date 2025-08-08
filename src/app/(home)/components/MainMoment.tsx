@@ -15,9 +15,9 @@ export default function MainMoments({
     {
       image: "/6.png",
       videoUrl: "/",
-      title: "Abertura do evento com o PCA da ANPG",
+      title: "Abertura do evento",
       description:
-        "A abertura do Fórum sobre o Impacto do Setor Financeiro no Conteúdo Local, foi marcada pela presença do PCA da ANPG, Eng. Jerónimo Paulino.",
+        "A abertura do Fórum sobre o Impacto do Setor Financeiro no Conteúdo Local, foi marcada pela presença do PCA da ANPG, Eng. Jerónimo Paulino e o CEO da Global Services Corporation, Edson Kachivela.",
     },
     {
       image: "/7.jpeg",
